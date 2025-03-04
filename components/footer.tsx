@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Instagram, Linkedin, Mail } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -41,28 +41,28 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://github.com/coderkai03"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300"
                 aria-label="Github"
               >
                 <Github size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/riancorcino/"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/rian.corcino/"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300"
-                aria-label="Twitter"
+                aria-label="Instagram"
               >
-                <Twitter size={20} />
+                <Instagram size={20} />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:rian@corcino.net"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors duration-300"
                 aria-label="Email"
               >
@@ -104,10 +104,10 @@ export default function Footer() {
               <li className="flex items-start">
                 <Mail size={18} className="mr-2 mt-1 flex-shrink-0" />
                 <a
-                  href="mailto:contact@example.com"
+                  href="mailto:rian@corcino.net"
                   className="text-blue-100 hover:text-white transition-colors duration-300"
                 >
-                  contact@example.com
+                  rian@corcino.net
                 </a>
               </li>
               <li>

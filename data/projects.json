@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Viral AI",
+    "description": "Predict if your TikToks will go viral or not",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/285/643/datas/medium.png",
+    "devpost": "https://devpost.com/software/will-i-go-viral",
+    "isWinner": false
+  },
+  {
+    "title": "GeoTrainer",
+    "description": "GeoTrainer is an AI-powered geography game that enhances user retention with interactive hints.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/249/225/datas/medium.png",
+    "devpost": "https://devpost.com/software/geotrainer",
+    "isWinner": false
+  },
+  {
+    "title": "GrocerEase",
+    "description": "Save time, groceries, and money with every receipt using GrocerEase",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/237/398/datas/medium.png",
+    "devpost": "https://devpost.com/software/grocerease-9rjd7n",
+    "isWinner": false
+  },
+  {
+    "title": "Vroom",
+    "description": "Drive to save, fuel to earn, for cleaner skies with every turn.",
+    "image": "https://d2dmyh35ffsxbl.cloudfront.net/assets/defaults/thumbnail-placeholder-8c916ef4da99a222ce6ece077c71c7e282f071f830747b2abb5718018cbfa699.gif",
+    "devpost": "https://devpost.com/software/vroom-28wmr3",
+    "isWinner": false
+  },
+  {
+    "title": "StellAR",
+    "description": "Investors need an unfair advantage to seize top opportunities. Our AR platform saves clients time by enabling them to engage with financial data in real time, optimizing control like never before.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/128/436/datas/medium.png",
+    "devpost": "https://devpost.com/software/stellar-ktiy3h",
+    "isWinner": false
+  },
+  {
+    "title": "InstaRizz",
+    "description": "InstaRizz is a wearable enabled smart application that allows you to recongize people based on the video feed of your Meta Ray Bans, providing scraped information about them and pickup lines to use.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/098/860/datas/medium.png",
+    "devpost": "https://devpost.com/software/magicloops",
+    "isWinner": false
+  },
+  {
+    "title": "Elevate",
+    "description": "Empowering Homelessness Through Community Crowdfunding and Prioritisation",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/090/232/datas/medium.png",
+    "devpost": "https://devpost.com/software/elevate-pklvrh",
+    "isWinner": false
+  },
+  {
+    "title": "SwarmAid",
+    "description": "Feeding communities, reducing waste with Swarm intelligence",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/077/214/datas/medium.png",
+    "devpost": "https://devpost.com/software/swarmaid",
+    "isWinner": true
+  },
+  {
+    "title": "Disco Match",
+    "description": "Find YOUR perfect hackathon team powered by AI! Live at https://girlhacks.vercel.app",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/050/449/datas/medium.png",
+    "devpost": "https://devpost.com/software/disco-de-match",
+    "isWinner": true
+  },
+  {
+    "title": "Editly",
+    "description": "AI-powered video editing that follows the latest social media trends, helping you boost your personal brand effortlessly.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/038/825/datas/medium.png",
+    "devpost": "https://devpost.com/software/editly-3ud79g",
+    "isWinner": false
+  },
+  {
+    "title": "Legal-Ease",
+    "description": "Focus on business. We'll handle the law!",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/932/266/datas/medium.png",
+    "devpost": "https://devpost.com/software/legal-ease-jqu34d",
+    "isWinner": false
+  },
+  {
+    "title": "SpaceTro",
+    "description": "Empowering young astronauts of tomorrow",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/906/005/datas/medium.png",
+    "devpost": "https://devpost.com/software/spacetro",
+    "isWinner": false
+  },
+  {
+    "title": "BobaBae",
+    "description": "Find yourself your Boba Bae",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/897/164/datas/medium.png",
+    "devpost": "https://devpost.com/software/bobabae-2xk7ze",
+    "isWinner": false
+  },
+  {
+    "title": "NagaGuard",
+    "description": "We aim to help local clinics and hospitals by optimizing the clinical coding process. 🏥",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/866/650/datas/medium.png",
+    "devpost": "https://devpost.com/software/nagaguard",
+    "isWinner": true
+  },
+  {
+    "title": "SF Civil Pro",
+    "description": "SF Civil Pro is a platform designed to assist civil service professionals in preparing for civil service exam. With study materials and practice tests, SF Civil Pro aims to empower individuals.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/839/689/datas/medium.png",
+    "devpost": "https://devpost.com/software/sf-civil-pro",
+    "isWinner": true
+  }
+]

@@ -6,11 +6,11 @@ import { Menu, X } from "lucide-react"
 import { motion } from "framer-motion"
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Contact", href: "/#contact" },
 ]
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <Link href="#home" className="text-2xl font-bold text-blue-600 flex items-center">
+            <Link href="/" className="text-2xl font-bold text-blue-600 flex items-center">
               <span className="mr-1">⚡</span> Rian Corcino
             </Link>
           </motion.div>
