@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { GraduationCap, User, Zap, Code2, Blocks, Wrench } from "lucide-react"
+import SchoolItem from './school-item'
 
 const skills = {
   languages: {
@@ -85,10 +86,21 @@ export default function About() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Education</h3>
-                <div className="bg-white rounded-lg p-4 border border-blue-100 shadow-sm">
-                  <h4 className="font-medium text-gray-800">Western Governors University</h4>
-                  <p className="text-gray-600">Bachelor&apos;s in Computer Science</p>
-                  <p className="text-gray-500 text-sm">2021 - 2026</p>
+                <div className="space-y-6">
+                  <SchoolItem 
+                    logo="/assets/wgu-logo.png"
+                    logoAlt="WGU Logo"
+                    schoolName="Western Governors University"
+                    degree="Bachelor's in Computer Science"
+                    years="2024 - 2026"
+                  />
+                  <SchoolItem 
+                    logo="/assets/rcc.png"
+                    logoAlt="RCC Logo"
+                    schoolName="Riverside City College"
+                    degree="Associate's in Computer Science"
+                    years="2021 - 2024"
+                  />
                 </div>
               </div>
             </div>

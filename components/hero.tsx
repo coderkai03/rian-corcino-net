@@ -5,6 +5,12 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 
 export default function Hero() {
+  const sequence = [
+    "I'm a Full Stack Developer", 2000,
+    "I'm a Content Creator", 2000,
+    "I'm a Hack(athon)er", 2000,
+    "I'm a Marvel/DC Nerd", 2000,
+  ]
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
       {/* Lightning Background Elements */}
@@ -47,7 +53,7 @@ export default function Hero() {
               className="text-xl md:text-2xl lg:text-3xl text-blue-600 font-medium mb-6 h-16"
             >
               <TypeAnimation
-                sequence={["I'm an Engineer", 2000, "I'm a Content Creator", 2000, "I'm a Traveler", 2000]}
+                sequence={sequence}
                 wrapper="span"
                 speed={50}
                 repeat={Number.POSITIVE_INFINITY}
