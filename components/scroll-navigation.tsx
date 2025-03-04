@@ -20,8 +20,6 @@ export default function SectionNavigation() {
   // Handle scroll to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY
-
       // Don't update active section while navigating
       if (document.body.classList.contains("navigating")) return
 

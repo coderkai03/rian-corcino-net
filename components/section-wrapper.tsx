@@ -22,9 +22,6 @@ export default function SectionWrapper({ id, children, initialActive = false }: 
 
     // Function to check if this section is active
     const checkActive = () => {
-      const allSections = document.querySelectorAll("section[id]")
-      const scrollPosition = window.scrollY
-
       // Don't update while navigating
       if (document.body.classList.contains("navigating")) return
 

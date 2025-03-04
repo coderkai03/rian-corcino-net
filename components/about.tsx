@@ -72,7 +72,7 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Who I Am</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  I'm a passionate software engineer with experience in full-stack development, mobile applications, and
+                  I&apos;m a passionate software engineer with experience in full-stack development, mobile applications, and
                   cloud technologies. I enjoy solving complex problems and building innovative solutions that make a
                   positive impact.
                 </p>
@@ -87,7 +87,7 @@ export default function About() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Education</h3>
                 <div className="bg-white rounded-lg p-4 border border-blue-100 shadow-sm">
                   <h4 className="font-medium text-gray-800">Western Governors University</h4>
-                  <p className="text-gray-600">Bachelor's in Computer Science</p>
+                  <p className="text-gray-600">Bachelor&apos;s in Computer Science</p>
                   <p className="text-gray-500 text-sm">2021 - 2026</p>
                 </div>
               </div>
