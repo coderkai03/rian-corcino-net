@@ -67,7 +67,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="text-gray-600 text-lg mb-8 max-w-lg mx-auto md:mx-0"
             >
-              Building innovative solutions and creating impactful experiences through technology.
+              Obsessed with enhancing modern productivity using AI and rizz.
             </motion.p>
 
             <motion.div
