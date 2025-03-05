@@ -36,13 +36,13 @@ export default function About() {
           initial={{ opacity: 0, x: -100, y: -100 }}
           whileInView={{ opacity: 0.05, x: 0, y: 0 }}
           transition={{ duration: 1 }}
-          className="absolute top-20 left-20 w-64 h-64 bg-blue-400 rounded-full filter blur-3xl"
+          className="absolute top-20 left-20 w-64 h-64 bg-blue-600 rounded-full filter blur-3xl"
         />
         <motion.div
           initial={{ opacity: 0, x: 100, y: 100 }}
           whileInView={{ opacity: 0.05, x: 0, y: 0 }}
           transition={{ duration: 1 }}
-          className="absolute bottom-20 right-20 w-64 h-64 bg-blue-300 rounded-full filter blur-3xl"
+          className="absolute bottom-20 right-20 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl"
         />
       </div>
 
@@ -55,7 +55,7 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">

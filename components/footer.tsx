@@ -14,7 +14,7 @@ const pageLinks = ["Home", "About", "Experience", "Projects", "Resume"]
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-blue-600 text-white py-12">
+    <footer id="contact" className="bg-blue-800 text-white py-12">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-start max-w-4xl mx-auto mb-12">
           {/* Left side: Page Links */}
@@ -29,14 +29,14 @@ export default function Footer() {
               <a
                 key={index}
                 href={`#${item.toLowerCase()}`}
-                className="text-blue-100 hover:text-white transition-colors duration-300 text-lg"
+                className="text-blue-200 hover:text-white transition-colors duration-300 text-lg"
               >
                 {item}
               </a>
             ))}
           </motion.div>
 
-          {/* Right side: Social Links and Email */}
+          {/* Right side: Social Links */}
           <motion.div 
             className="flex flex-col items-end gap-6"
             initial={{ opacity: 0, y: 20 }}
@@ -56,12 +56,6 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <a
-              href="mailto:rian@corcino.net"
-              className="text-blue-100 hover:text-white transition-colors duration-300 text-lg"
-            >
-              rian@corcino.net
-            </a>
           </motion.div>
         </div>
 
@@ -73,7 +67,7 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <p className="text-blue-100 text-sm">
+          <p className="text-blue-200 text-sm">
             © {new Date().getFullYear()} Rian Corcino. All rights reserved.
           </p>
         </motion.div>

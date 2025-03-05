@@ -41,7 +41,7 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <Link href="/" className="text-2xl font-bold text-blue-600 flex items-center">
+            <Link href="/" className="text-2xl font-bold text-blue-800 flex items-center">
               <span className="mr-1">⚡</span> Rian Corcino
             </Link>
           </motion.div>
@@ -62,10 +62,10 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 relative group"
+                  className="text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 relative group pb-1"
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-800 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </motion.li>
             ))}
@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+              className="text-gray-700 hover:text-blue-800 transition-colors duration-300"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -102,7 +102,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 block"
+                    className="text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 block"
                   >
                     {link.name}
                   </Link>

@@ -14,7 +14,7 @@ export default function Resume() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Resume</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="flex justify-center">
