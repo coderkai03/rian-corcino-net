@@ -10,7 +10,7 @@ const socialLinks = [
   { icon: <Mail size={24} />, href: "mailto:rian@corcino.net", label: "Email" },
 ]
 
-const pageLinks = ["Home", "About", "Experience", "Projects"]
+const pageLinks = ["Home", "About", "Experience", "Projects", "Resume"]
 
 export default function Footer() {
   return (
