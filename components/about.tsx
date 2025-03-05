@@ -73,9 +73,11 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Who I Am</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  I&apos;m a passionate software engineer with experience in full-stack development, mobile applications, and
-                  cloud technologies. I enjoy solving complex problems and building innovative solutions that make a
-                  positive impact.
+                  👋 Hey there! I&apos;m Rian, a <strong>full-stack developer</strong> who&apos;s obsessed with
+                  building tools to enhance modern productivity.
+                  <br /><br />
+                  I love attending <strong>hackathons (20+)</strong>, making CS videos
+                  on <strong>Instagram (10K+ followers)</strong>, and learning <strong>Duolingo (Chinese/Japanese)</strong>!
                 </p>
               </div>
             </div>

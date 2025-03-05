@@ -9,7 +9,7 @@ export default function Hero() {
     "I'm a Full Stack Developer", 2000,
     "I'm a Content Creator", 2000,
     "I'm a Hack(athon)er", 2000,
-    "I'm a Marvel/DC Nerd", 2000,
+    "I'm a Duolingo Nerd", 2000,
   ]
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">

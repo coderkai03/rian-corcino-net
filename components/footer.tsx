@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="flex justify-between items-start max-w-4xl mx-auto mb-12">
           {/* Left side: Page Links */}
           <motion.div 
-            className="flex flex-col gap-3"
+            className="flex items-center space-x-8"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
