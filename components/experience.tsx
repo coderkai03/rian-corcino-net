@@ -85,10 +85,7 @@ export default function Experience() {
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <WorkItem key={index} {...exp} index={index}>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-blue-800 rounded-full border-4 border-white"></div>
-                <p className="text-blue-800 font-medium">{exp.position}</p>
-              </WorkItem>
+              <WorkItem key={index} {...exp} index={index} />
             ))}
           </div>
         </div>
