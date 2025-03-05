@@ -17,7 +17,7 @@ const experiences = [
     ],
   },
   {
-    company: "TuneLink",
+    company: "Oregon Human Development Corporation",
     position: "Software Engineer Intern",
     period: "Oct 2023 – Apr. 2024",
     location: "Riverside, CA",
