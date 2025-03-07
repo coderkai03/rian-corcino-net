@@ -12,6 +12,11 @@ const navLinks = [
   { name: "Projects", href: "/#projects" },
   { name: "Resume", href: "/#resume" },
   { name: "Contact", href: "/#contact" },
+  { 
+    name: "✨ AI Build", 
+    href: "/ai-build-guide",
+    className: "bg-blue-800 text-white px-4 py-1.5 rounded-full hover:bg-blue-900 transition-colors duration-300" 
+  },
 ]
 
 export default function Navbar() {
@@ -62,10 +67,12 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 relative group pb-1"
+                  className={`${link.className || "text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 relative group pb-1"}`}
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-800 transition-all duration-300 group-hover:w-full"></span>
+                  {link.className && (
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-800 transition-all duration-300 group-hover:w-full"></span>
+                  )}
                 </Link>
               </motion.li>
             ))}
@@ -102,7 +109,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 block"
+                    className={`${link.className || "text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 block"}`}
                   >
                     {link.name}
                   </Link>
