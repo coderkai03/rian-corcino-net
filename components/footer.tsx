@@ -59,18 +59,36 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Copyright centered at bottom */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-blue-200 text-sm">
-            © {new Date().getFullYear()} Rian Corcino. All rights reserved.
-          </p>
-        </motion.div>
+        <div className="max-w-4xl mx-auto">
+          {/* Build Your Own button */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mb-8"
+          >
+            <a
+              href="/ai-build-guide"
+              className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors duration-300 inline-flex items-center"
+            >
+              Build Your Own
+            </a>
+          </motion.div>
+
+          {/* Copyright */}
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-blue-200 text-sm">
+              © {new Date().getFullYear()} Rian Corcino. All rights reserved.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </footer>
   )

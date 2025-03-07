@@ -117,7 +117,7 @@ export default function AIBuildGuide() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
-            <Sparkle size={32} className="text-blue-800" /> Build your portfolio with AI in a day!
+            <Sparkle size={32} className="text-blue-800" /> Build your portfolio in a day with AI!
           </h2>
           <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full"></div>
         </div>

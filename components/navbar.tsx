@@ -13,8 +13,8 @@ const navLinks = [
   { name: "Resume", href: "/#resume" },
   { name: "Contact", href: "/#contact" },
   { 
-    name: "✨ AI Build", 
-    href: "/ai-build-guide",
+    name: "✨ Build Your Own!", 
+    href: "/build-your-own",
     className: "bg-blue-800 text-white px-4 py-1.5 rounded-full hover:bg-blue-900 transition-colors duration-300" 
   },
 ]
@@ -71,7 +71,7 @@ export default function Navbar() {
                 >
                   {link.name}
                   {link.className && (
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-800 transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                   )}
                 </Link>
               </motion.li>
