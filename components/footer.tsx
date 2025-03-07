@@ -14,12 +14,12 @@ const pageLinks = ["Home", "About", "Experience", "Projects", "Resume"]
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-blue-800 text-white py-12">
-      <div className="container mx-auto px-6">
-        <div className="flex justify-between items-start max-w-4xl mx-auto mb-12">
+    <footer id="contact" className="bg-blue-800 text-white py-12 px-4">
+      <div className="container mx-auto">
+        <div className="flex flex-col sm:flex-row justify-between items-center max-w-4xl mx-auto mb-12 gap-8">
           {/* Left side: Page Links */}
           <motion.div 
-            className="flex items-center space-x-8"
+            className="flex flex-wrap justify-center sm:justify-start gap-6"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -38,35 +38,33 @@ export default function Footer() {
 
           {/* Right side: Social Links */}
           <motion.div 
-            className="flex flex-col items-end gap-6"
+            className="flex gap-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="flex space-x-4">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors duration-300"
-                  aria-label={link.label}
-                >
-                  {link.icon}
-                </a>
-              ))}
-            </div>
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors duration-300"
+                aria-label={link.label}
+              >
+                {link.icon}
+              </a>
+            ))}
           </motion.div>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto flex flex-col items-center gap-8">
           {/* Build Your Own button */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="mb-8"
+            className="self-start"
           >
             <a
               href="/build-your-own"
@@ -78,7 +76,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <motion.div
-            className="text-center"
+            className="text-center w-full"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}

@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 
 export default function Resume() {
   return (
@@ -17,7 +18,19 @@ export default function Resume() {
           <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="flex justify-center">
+        {/* Mobile View Button */}
+        <div className="md:hidden flex justify-center mb-6">
+          <a
+            href="/assets/Rian_Corcino_Resume_DISPLAY.pdf"
+            target="_blank"
+            className="bg-blue-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 inline-flex items-center gap-2"
+          >
+            View Resume <ExternalLink size={20} />
+          </a>
+        </div>
+
+        {/* Desktop iframe */}
+        <div className="hidden md:flex justify-center">
           <iframe
             src="/assets/Rian_Corcino_Resume_DISPLAY.pdf"
             className="w-full max-w-5xl h-screen max-h-[800px] rounded-lg shadow-lg"
@@ -26,5 +39,5 @@ export default function Resume() {
         </div>
       </div>
     </section>
-  )
-} 
+  );
+}
