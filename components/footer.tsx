@@ -69,7 +69,7 @@ export default function Footer() {
             className="mb-8"
           >
             <a
-              href="/ai-build-guide"
+              href="/build-your-own"
               className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors duration-300 inline-flex items-center"
             >
               Build Your Own

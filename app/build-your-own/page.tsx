@@ -180,6 +180,20 @@ export default function AIBuildGuide() {
               </div>
             </div>
           ))}
+          
+          {/* Credit Reference */}
+          <div className="mt-16 text-center">
+            <p className="text-gray-600 text-lg">
+              Inspired by{" "}
+              <Link 
+                href="https://www.linkedin.com/posts/dhyunkim_ai-product-innovation-activity-7299850577658662912--N7g"
+                className="text-blue-800 hover:text-blue-900 inline-flex items-center gap-1 font-semibold"
+                target="_blank"
+              >
+                Daniel Kim&apos;s post <ExternalLink size={16} />
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </section>
