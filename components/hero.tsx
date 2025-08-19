@@ -6,7 +6,8 @@ import Image from "next/image"
 
 export default function Hero() {
   const sequence = [
-    "I'm a Full Stack Developer", 2000,
+    "I'm a Software Engineer", 2000,
+    "I'm an AI Engineer", 2000,
     "I'm a Content Creator", 2000,
     "I'm a Hack(athon)er", 2000,
     "I'm a Duolingo Nerd", 2000,
@@ -60,15 +61,6 @@ export default function Hero() {
                 className="inline-block"
               />
             </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-gray-300 text-lg mb-8 max-w-lg mx-auto md:mx-0"
-            >
-              Obsessed with enhancing modern productivity using AI and rizz.
-            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

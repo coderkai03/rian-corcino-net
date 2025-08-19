@@ -75,7 +75,7 @@ export default function Navbar() {
               transition={{ duration: 0.5 }}
               className="flex items-center"
             >
-              <Link href="/" className="text-2xl font-bold text-blue-400 flex items-center">
+              <Link href="/" className="text-2xl font-bold text-white flex items-center">
                 <span className="mr-1">⚡</span> Rian Corcino
               </Link>
             </motion.div>

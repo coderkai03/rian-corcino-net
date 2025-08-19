@@ -1,5 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const fs = require('fs');
+const path = require('path');
 
 const DEVPOST_URL = 'https://devpost.com/riancorci';
 
@@ -29,9 +31,6 @@ async function scrapeDevpostProjects() {
 
     console.log(JSON.stringify(projects, null, 2));
     // Write projects array to JSON file
-    const fs = require('fs');
-    const path = require('path');
-
     const outputPath = path.join(__dirname, '..', 'data', 'projects.json');
     
     // Ensure directory exists

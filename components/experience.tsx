@@ -20,19 +20,20 @@ const experiences = [
   {
     company: "Microsoft",
     position: "Software Engineer Intern",
-    period: "Jun 2024 – Sep. 2024",
+    period: "Jun. 2024 – Sep. 2024",
     location: "Redmond, WA",
     logo: "/assets/microsoft.png",
     responsibilities: [
-      "Enhanced catch-up search accuracy by 7% in Microsoft Copilot by optimizing queries with C# and Azure Search",
+      "Enhanced Microsoft Copilot catch-up search accuracy by 7% by optimizing queries with Azure Search",
       "Reduced search latency by 200 ms by integrating meeting summaries with C#, Azure Functions, and Kafka",
-      "Increased query retrieval efficiency by 15% by optimizing search pipeline with C# and Microsoft Graph",
+      "Increased query retrieval efficiency by 15% by optimizing search pipeline with Microsoft Knowledge Graph",
+      "Learned and applied Microsoft's internal AGILE development framework through weekly sprints",
     ],
   },
   {
     company: "Oregon Human Development Corporation",
     position: "Software Engineer Intern",
-    period: "Oct 2023 – Apr. 2024",
+    period: "Oct. 2023 – Apr. 2024",
     location: "Riverside, CA",
     logo: "/assets/ohdc.jpg",
     responsibilities: [
@@ -44,18 +45,19 @@ const experiences = [
   {
     company: "Microsoft",
     position: "Software Engineer Intern",
-    period: "May 2022 – Jul. 2022",
+    period: "May 2023 – Jul. 2023",
     location: "Remote",
     logo: "/assets/microsoft.png",
     responsibilities: [
-      "Built React web app for 100+ daily active users; 60% higher engagement between student users",
-      "Designed an analytics dashboard using GraphQL, managing over 2,000 weekly events and gaining practical experience in data processing",
+      "Built real-time collaborations app for 100+ students using React, resulting in a 63% increase in classroom engagement",
+      "Implemented messaging, polling, and feedback features using web sockets to enhance participation in real-time classrooms",
+      "Designed analytics dashboard using GraphQL to surface action items and visualize student data"
     ],
   },
   {
     company: "Riverside City College",
     position: "Teaching Assistant",
-    period: "Feb 2022 – Jul. 2023",
+    period: "Feb. 2022 – Jul. 2023",
     location: "Riverside, CA",
     logo: "/assets/rcc.png",
     responsibilities: [
@@ -96,7 +98,7 @@ export default function Experience() {
           {/* Timeline Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500/20 hidden md:block"></div>
 
-          <div className="space-y-12">
+          <div className="-space-y-4">
             {experiences.map((exp, index) => (
               <WorkItem key={index} {...exp} index={index} />
             ))}

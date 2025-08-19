@@ -1,5 +1,40 @@
 [
   {
+    "title": "BioNote",
+    "description": "Master biology with precision through intelligent, interactive learning.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/501/042/datas/medium.png",
+    "devpost": "https://devpost.com/software/bionote",
+    "isWinner": false
+  },
+  {
+    "title": "AERIS: Autonomous Emergency Response & Intelligence System",
+    "description": "Autonomous drones scan disaster zones, detecting humans and hazards (fire, flood, debris), triaging victims by urgency & routing responders along safe paths that avoid obstacles.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/394/896/datas/medium.png",
+    "devpost": "https://devpost.com/software/aeris-ej7d9k",
+    "isWinner": true
+  },
+  {
+    "title": "Classify",
+    "description": "Create informational, visually stunning class schedules using AI!",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/385/914/datas/medium.png",
+    "devpost": "https://devpost.com/software/classify-skupw3",
+    "isWinner": false
+  },
+  {
+    "title": "GitGud",
+    "description": "Master DSA one morning at a time — because greatness starts before coffee.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/376/864/datas/medium.png",
+    "devpost": "https://devpost.com/software/gitgud-etyh65",
+    "isWinner": false
+  },
+  {
+    "title": "ICUthere",
+    "description": "ICUthere uses empathetic voice AI to streamline hospital triage, cutting ER wait times, easing staff burnout, and improving care quality for patients.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/361/597/datas/medium.png",
+    "devpost": "https://devpost.com/software/deez-7y01ae",
+    "isWinner": false
+  },
+  {
     "title": "Viral AI",
     "description": "Predict if your TikToks will go viral or not",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/285/643/datas/medium.png",
