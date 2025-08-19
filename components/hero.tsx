@@ -19,13 +19,13 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: [0.1, 0.3, 0.1] }}
           transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl opacity-10"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-10"
         />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 7, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
-          className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-blue-300 rounded-full filter blur-3xl opacity-10"
+          className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-blue-500 rounded-full filter blur-3xl opacity-10"
         />
       </div>
 
@@ -41,7 +41,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 mb-4"
             >
               Hi, I&apos;m Rian Corcino
             </motion.h1>
@@ -50,7 +50,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xl md:text-2xl lg:text-3xl text-blue-600 font-medium mb-6 h-16"
+              className="text-xl md:text-2xl lg:text-3xl text-blue-400 font-medium mb-6 h-16"
             >
               <TypeAnimation
                 sequence={sequence}
@@ -65,7 +65,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-gray-600 text-lg mb-8 max-w-lg mx-auto md:mx-0"
+              className="text-gray-300 text-lg mb-8 max-w-lg mx-auto md:mx-0"
             >
               Obsessed with enhancing modern productivity using AI and rizz.
             </motion.p>
@@ -78,7 +78,7 @@ export default function Hero() {
             >
               <a
                 href="#projects"
-                className="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-blue-300/50 flex items-center group"
+                className="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-500 transition-colors duration-300 shadow-lg hover:shadow-blue-500/40 flex items-center group"
               >
                 View My Work
                 <svg
@@ -98,7 +98,7 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors duration-300"
+                className="px-6 py-3 bg-transparent text-blue-400 border border-blue-500 rounded-full font-medium hover:bg-blue-500/10 transition-colors duration-300"
               >
                 Contact Me
               </a>
@@ -134,7 +134,7 @@ export default function Hero() {
       >
         <a
           href="#about"
-          className="flex flex-col items-center text-gray-500 hover:text-blue-600 transition-colors duration-300"
+          className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors duration-300"
         >
           <span className="text-sm mb-2">Scroll Down</span>
           <svg

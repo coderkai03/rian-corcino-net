@@ -104,7 +104,7 @@ export default function SectionNavigation() {
         initial={{ x: "-100%" }}
         animate={{ x: isMobileNavOpen || window.innerWidth >= 768 ? 0 : "-100%" }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed left-0 top-0 h-full bg-white/90 backdrop-blur-md shadow-lg z-40 pt-24 w-64 md:w-20 lg:w-24"
+        className="fixed left-0 top-0 h-full bg-neutral-900/90 backdrop-blur-md shadow-lg z-40 pt-24 w-64 md:w-20 lg:w-24"
       >
         <div className="flex flex-col items-center h-full">
           {sections.map((section) => (
@@ -114,7 +114,7 @@ export default function SectionNavigation() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`flex items-center w-full px-4 py-4 mb-2 transition-colors duration-300 ${
-                activeSection === section.id ? "bg-blue-600 text-white" : "text-gray-700 hover:bg-blue-100"
+                activeSection === section.id ? "bg-blue-600 text-white" : "text-gray-200 hover:bg-blue-500/10"
               }`}
             >
               <div className="flex items-center justify-center w-10 h-10 rounded-full">

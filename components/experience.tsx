@@ -5,6 +5,19 @@ import WorkItem from '@/components/work-item'
 
 const experiences = [
   {
+    company: "Ayzenberg",
+    position: "AI Engineer",
+    period: "Jul. 2025 – Present",
+    location: "Pasadena, CA",
+    logo: "/assets/ayzenberg_logo.jpg",
+    responsibilities: [
+      "Building AI agents for Microsoft Teams that automate 10+ workflows (file management, employee lookups, project tracking, etc.), already reaching 500+ employees within the first month",
+      "Implementing a RAG pipeline using Azure Functions and Vector Indexes from 5+ sources to unify company data, including project files, SharePoint content, and employee directory, into a centralized AI-powered search system",
+      "Deploying LLM/embedding models via Azure AI Foundry, ensuring scalable integration with Microsoft 365",
+      "Collaborating with SVPs and IT leadership to deliver AI agents aligned with organizational priorities",
+    ],
+  },
+  {
     company: "Microsoft",
     position: "Software Engineer Intern",
     period: "Jun 2024 – Sep. 2024",
@@ -56,14 +69,14 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-blue-50 relative">
+    <section id="experience" className="py-20 bg-neutral-900 relative">
       {/* Lightning Effect Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: [0.05, 0.1, 0.05] }}
           transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl"
+          className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"
         />
       </div>
 
@@ -75,13 +88,13 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Work Experience</h2>
-          <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">Work Experience</h2>
+          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 hidden md:block"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500/20 hidden md:block"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (

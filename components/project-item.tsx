@@ -32,7 +32,7 @@ export default function ProjectItem({ project, index, isPage = false }: ProjectI
       <motion.div
         {...motionProps}
         transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col"
+        className="bg-neutral-800 rounded-lg overflow-hidden shadow-lg border border-neutral-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col"
       >
         <div className="relative h-64 w-full">
           <Image 
@@ -49,8 +49,8 @@ export default function ProjectItem({ project, index, isPage = false }: ProjectI
           )}
         </div>
         <div className="p-6 flex-1 flex flex-col">
-          <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
-          <p className="text-gray-600 flex-1">{project.description}</p>
+          <h3 className="text-xl font-bold text-gray-100 mb-2">{project.title}</h3>
+          <p className="text-gray-300 flex-1">{project.description}</p>
         </div>
       </motion.div>
     </a>

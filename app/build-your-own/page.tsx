@@ -108,18 +108,18 @@ git push -u origin main`
 
 export default function AIBuildGuide() {
   return (
-    <section id="ai-guide" className="py-20 bg-blue-50 relative">
+    <section id="ai-guide" className="py-20 bg-neutral-900 relative">
       {/* Lightning Effect Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl opacity-[0.05]" />
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-[0.07]" />
       </div>
 
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
-            <Sparkle size={32} className="text-blue-800" /> Build your portfolio in a day with AI!
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4 flex items-center justify-center gap-2">
+            <Sparkle size={32} className="text-blue-400" /> Build your portfolio in a day with AI!
           </h2>
-          <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -129,10 +129,10 @@ export default function AIBuildGuide() {
               className="mb-16"
             >
               <div className="flex items-start space-x-4 mb-8">
-                <div className="bg-blue-800 text-white p-3 rounded-lg">
+                <div className="bg-blue-600 text-white p-3 rounded-lg">
                   <span className="text-xl font-bold">{index + 1}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 pt-1">{section.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-100 pt-1">{section.title}</h3>
               </div>
 
               <div className="space-y-6 pl-16">
@@ -141,12 +141,12 @@ export default function AIBuildGuide() {
                     key={stepIndex}
                     className="space-y-3"
                   >
-                    <p className="text-gray-600 text-lg flex items-start gap-3">
-                      <span className="font-semibold text-blue-800">{step.number}</span>
+                    <p className="text-gray-300 text-lg flex items-start gap-3">
+                      <span className="font-semibold text-blue-400">{step.number}</span>
                       {step.link ? (
                         <Link 
                           href={step.link}
-                          className="text-blue-800 hover:text-blue-900 inline-flex items-center gap-1"
+                          className="text-blue-400 hover:text-blue-300 inline-flex items-center gap-1"
                           target="_blank"
                         >
                           {step.text} <ExternalLink size={16} />
@@ -159,7 +159,7 @@ export default function AIBuildGuide() {
                       <div className="mt-2 ml-10">
                         <Link
                           href={step.download.link}
-                          className="inline-flex items-center gap-2 bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition-colors duration-300"
+                          className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition-colors duration-300"
                           target="_blank"
                           download
                         >
@@ -169,9 +169,9 @@ export default function AIBuildGuide() {
                       </div>
                     )}
                     {step.code && (
-                      <div className="bg-white rounded-xl p-6 border border-blue-100 shadow-lg">
+                      <div className="bg-neutral-800 rounded-xl p-6 border border-neutral-700 shadow-lg">
                         <pre className="overflow-x-auto">
-                          <code className="text-blue-800">{step.code}</code>
+                          <code className="text-blue-300">{step.code}</code>
                         </pre>
                       </div>
                     )}
@@ -183,11 +183,11 @@ export default function AIBuildGuide() {
           
           {/* Credit Reference */}
           <div className="mt-16 text-center">
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-300 text-lg">
               Inspired by{" "}
               <Link 
                 href="https://www.linkedin.com/posts/dhyunkim_ai-product-innovation-activity-7299850577658662912--N7g"
-                className="text-blue-800 hover:text-blue-900 inline-flex items-center gap-1 font-semibold"
+                className="text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 font-semibold"
                 target="_blank"
               >
                 Daniel Kim&apos;s post <ExternalLink size={16} />
