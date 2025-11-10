@@ -10,6 +10,7 @@ interface Project {
   image: string
   devpost: string
   isWinner?: boolean
+  hackathon: string
 }
 
 export default function ProjectsPage() {
