@@ -58,22 +58,6 @@ export default function Footer() {
         </div>
 
         <div className="max-w-4xl mx-auto flex flex-col items-center gap-8">
-          {/* Build Your Own button */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="self-start"
-          >
-            <a
-              href="/build-your-own"
-              className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors duration-300 inline-flex items-center"
-            >
-              Build Your Own
-            </a>
-          </motion.div>
-
           {/* Copyright */}
           <motion.div
             className="text-center w-full"

@@ -9,6 +9,7 @@ interface Project {
   image: string
   devpost: string
   isWinner?: boolean
+  hackathon: string
 }
 
 interface ProjectItemProps {
@@ -32,7 +33,7 @@ export default function ProjectItem({ project, index, isPage = false }: ProjectI
       <motion.div
         {...motionProps}
         transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col"
+        className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col relative"
       >
         <div className="relative h-64 w-full">
           <Image 
@@ -51,6 +52,11 @@ export default function ProjectItem({ project, index, isPage = false }: ProjectI
         <div className="p-6 flex-1 flex flex-col">
           <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
           <p className="text-gray-600 flex-1">{project.description}</p>
+          {project.hackathon && (
+            <div className="mt-4 self-start bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium shadow">
+              {project.hackathon}
+            </div>
+          )}
         </div>
       </motion.div>
     </a>

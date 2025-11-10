@@ -1,6 +1,7 @@
 import { Calendar, MapPin } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import type { ReactNode } from "react"
 
 interface WorkItemProps {
   company: string
@@ -8,7 +9,7 @@ interface WorkItemProps {
   period: string
   location: string
   logo: string
-  responsibilities: string[]
+  responsibilities: ReactNode[]
   index: number
 }
 

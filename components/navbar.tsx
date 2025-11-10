@@ -12,11 +12,6 @@ const navLinks = [
   { name: "Projects", href: "/#projects" },
   { name: "Resume", href: "/#resume" },
   { name: "Contact", href: "/#contact" },
-  { 
-    name: "✨ Build Your Own!", 
-    href: "/build-your-own",
-    className: "bg-blue-800 text-white px-4 py-1.5 rounded-full hover:bg-blue-900 transition-colors duration-300" 
-  },
 ]
 
 const moreLinks = [
@@ -26,7 +21,6 @@ const moreLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   const [isMoreOpen, setIsMoreOpen] = useState(false)
 
   useEffect(() => {
@@ -36,14 +30,7 @@ export default function Navbar() {
     } else {
       document.body.style.overflow = 'unset'
     }
-    
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-
-    window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll)
       document.body.style.overflow = 'unset'
     }
   }, [isOpen])
@@ -63,9 +50,7 @@ export default function Navbar() {
       )}
       
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled || isOpen ? "bg-white/90 backdrop-blur-md shadow-md" : "bg-transparent"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md"
       >
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -96,12 +81,10 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`${link.className || "text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 relative group pb-1"}`}
+                    className={`text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 relative group pb-1`}
                   >
                     {link.name}
-                    {link.className && (
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-                    )}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </motion.li>
               ))}
@@ -172,7 +155,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`${link.className || "text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 block"}`}
+                      className="text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 block"
                     >
                       {link.name}
                     </Link>

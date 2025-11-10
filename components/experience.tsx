@@ -5,51 +5,41 @@ import WorkItem from '@/components/work-item'
 
 const experiences = [
   {
+    company: "Ayzenberg",
+    position: "AI Engineer Intern",
+    period: "Jul. 2025 – Present",
+    location: "Pasadena, CA",
+    logo: "/assets/ayzenberg.png",
+    responsibilities: [
+      <>Developing internal Copilot agents adopted by <strong>160+</strong> employees, automating <strong>14+</strong> cross-department workflows spanning HR, finance, and project management; reduced manual task time by <strong>40%</strong> and enabled instant access to company data</>,
+      <>Achieved <strong>98%</strong> response accuracy and <strong>200ms</strong> query latency through optimized Azure RAG pipelines</>,
+      <>Managing LLM/embedding models via Azure AI Foundry, ensuring scalable integration with Microsoft 365</>,
+      <>Collaborating with SVPs and IT leadership to deliver AI agents aligned with organizational priorities</>,
+    ],
+  },
+  {
     company: "Microsoft",
     position: "Software Engineer Intern",
-    period: "Jun 2024 – Sep. 2024",
+    period: "Jun. 2024 – Sep. 2024",
     location: "Redmond, WA",
     logo: "/assets/microsoft.png",
     responsibilities: [
-      "Enhanced catch-up search accuracy by 7% in Microsoft Copilot by optimizing queries with C# and Azure Search",
-      "Reduced search latency by 200 ms by integrating meeting summaries with C#, Azure Functions, and Kafka",
-      "Increased query retrieval efficiency by 15% by optimizing search pipeline with C# and Microsoft Graph",
-    ],
-  },
-  {
-    company: "Oregon Human Development Corporation",
-    position: "Software Engineer Intern",
-    period: "Oct 2023 – Apr. 2024",
-    location: "Riverside, CA",
-    logo: "/assets/ohdc.jpg",
-    responsibilities: [
-      "Built mobile application using Kotlin to educate 150K+ farmers on pesticide safety and heat stress management",
-      "Implemented table partitioning using BigQuery to replace static data, reducing update time by 90%",
-      "Integrated localization, translating the app into multiple languages to ensure accessibility for Hispanic farmers",
+      <>Enhanced Microsoft Copilot catch-up search accuracy by <strong>7%</strong> by optimizing queries with Azure Search</>,
+      <>Reduced search latency by <strong>200 ms</strong> by integrating meeting summaries with C#, Azure Functions, and Kafka</>,
+      <>Increased query retrieval efficiency by <strong>15%</strong> by optimizing search pipeline with Microsoft Knowledge Graph</>,
+      <>Learned and applied Microsoft’s internal AGILE development framework through weekly sprints</>,
     ],
   },
   {
     company: "Microsoft",
     position: "Software Engineer Intern",
-    period: "May 2022 – Jul. 2022",
+    period: "May 2023 – Jul. 2023",
     location: "Remote",
     logo: "/assets/microsoft.png",
     responsibilities: [
-      "Built React web app for 100+ daily active users; 60% higher engagement between student users",
-      "Designed an analytics dashboard using GraphQL, managing over 2,000 weekly events and gaining practical experience in data processing",
-    ],
-  },
-  {
-    company: "Riverside City College",
-    position: "Teaching Assistant",
-    period: "Feb 2022 – Jul. 2023",
-    location: "Riverside, CA",
-    logo: "/assets/rcc.png",
-    responsibilities: [
-      "Mentored Data Structures and Algorithms in C/C++, Java, Python, and JavaScript, resulting in a 90% pass rate",
-      "Led weekly labs and provided feedback to 300+ students on assignments, projects, and exams",
-      "Built full-stack automated code grading app; 70% faster reviews, scaled to 300+ concurrent users",
-      "Integrated LeetCode challenges into course curriculum, boosting students' problem-solving skills by 35%",
+      <>Built real-time collaborations app for <strong>100+</strong> students using React, resulting in a <strong>63%</strong> increase in classroom engagement</>,
+      <>Implemented messaging, polling, and feedback features using web sockets to enhance participation in real-time</>,
+      <>Designed an analytics dashboard using GraphQL to surface action items and visualize student data</>,
     ],
   },
 ]

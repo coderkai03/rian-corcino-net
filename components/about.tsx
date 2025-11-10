@@ -72,13 +72,19 @@ export default function About() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Who I Am</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  👋 Hey there! I&apos;m Rian, a <strong>full-stack developer</strong> who&apos;s obsessed with
-                  building tools to enhance modern productivity.
-                  <br /><br />
-                  I love attending <strong>hackathons (20+)</strong>, making CS videos
-                  on <strong>Instagram (10K+ followers)</strong>, and learning <strong>Duolingo (Chinese/Japanese)</strong>!
-                </p>
+                <div className="text-gray-600 leading-relaxed">
+                  <p>
+                    👋 Hey there! I&apos;m Rian, an aspiring <strong>Software Engineer</strong> who&apos;s obsessed with
+                    enhancing everyday tasks with AI.
+                    <br /><br />
+                    Major achievements that I&apos;m proud of!
+                  </p>
+                  <ul className="list-disc list-inside ml-4">
+                    <li><strong>2x</strong> SWE Intern @ Microsoft</li>
+                    <li>Won <strong>7x</strong> hackathons across the US</li>
+                    <li><strong>20K+</strong> followers on social media</li>
+                  </ul>
+                </div>
               </div>
             </div>
 

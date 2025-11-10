@@ -11,10 +11,13 @@ interface Project {
   image: string
   devpost: string
   isWinner: boolean
+  hackathon: string
 }
 
 export default function Projects() {
-  const previewProjects = projectsData.slice(0, 4)
+  const previewProjects = projectsData
+  .filter((project: Project) => project.isWinner)
+  .slice(0, 4)
 
   return (
     <section id="projects" className="py-20 bg-white relative">

@@ -1,107 +1,178 @@
 [
   {
+    "title": "VibeCheck",
+    "description": "Ace your interviews using AI interviewers and realtime feedback",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/899/956/datas/medium.png",
+    "devpost": "https://devpost.com/software/recruitme",
+    "isWinner": false,
+    "hackathon": "Cal Hacks 12.0"
+  },
+  {
+    "title": "BioNote",
+    "description": "Master biology with precision through intelligent, interactive learning.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/501/042/datas/medium.png",
+    "devpost": "https://devpost.com/software/bionote",
+    "isWinner": false,
+    "hackathon": "UC Berkeley AI Hackathon 2025"
+  },
+  {
+    "title": "AERIS: Autonomous Emergency Response & Intelligence System",
+    "description": "Autonomous drones scan disaster zones, detecting humans and hazards (fire, flood, debris), triaging victims by urgency & routing responders along safe paths that avoid obstacles.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/394/896/datas/medium.png",
+    "devpost": "https://devpost.com/software/aeris-ej7d9k",
+    "isWinner": true,
+    "hackathon": "LA Hacks 2025"
+  },
+  {
+    "title": "Classify",
+    "description": "Create informational, visually stunning class schedules using AI!",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/385/914/datas/medium.png",
+    "devpost": "https://devpost.com/software/classify-skupw3",
+    "isWinner": false,
+    "hackathon": "Citrus Hack 2025"
+  },
+  {
+    "title": "GitGud",
+    "description": "Master DSA one morning at a time — because greatness starts before coffee.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/376/864/datas/medium.png",
+    "devpost": "https://devpost.com/software/gitgud-etyh65",
+    "isWinner": false,
+    "hackathon": "FullyHacks 2025"
+  },
+  {
+    "title": "ICUthere",
+    "description": "ICUthere uses empathetic voice AI to streamline hospital triage, cutting ER wait times, easing staff burnout, and improving care quality for patients.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/361/597/datas/medium.png",
+    "devpost": "https://devpost.com/software/deez-7y01ae",
+    "isWinner": false,
+    "hackathon": "SFHacks 2025"
+  },
+  {
     "title": "Viral AI",
     "description": "Predict if your TikToks will go viral or not",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/285/643/datas/medium.png",
     "devpost": "https://devpost.com/software/will-i-go-viral",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "Hacklytics 2025: Jurassic Age"
   },
   {
     "title": "GeoTrainer",
     "description": "GeoTrainer is an AI-powered geography game that enhances user retention with interactive hints.",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/249/225/datas/medium.png",
     "devpost": "https://devpost.com/software/geotrainer",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "SpartaHack X"
   },
   {
     "title": "GrocerEase",
     "description": "Save time, groceries, and money with every receipt using GrocerEase",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/237/398/datas/medium.png",
     "devpost": "https://devpost.com/software/grocerease-9rjd7n",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "IrvineHacks 2025"
   },
   {
     "title": "Vroom",
     "description": "Drive to save, fuel to earn, for cleaner skies with every turn.",
     "image": "https://d2dmyh35ffsxbl.cloudfront.net/assets/defaults/thumbnail-placeholder-8c916ef4da99a222ce6ece077c71c7e282f071f830747b2abb5718018cbfa699.gif",
     "devpost": "https://devpost.com/software/vroom-28wmr3",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "HackUTD 2024: Ripple Effect"
   },
   {
     "title": "StellAR",
     "description": "Investors need an unfair advantage to seize top opportunities. Our AR platform saves clients time by enabling them to engage with financial data in real time, optimizing control like never before.",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/128/436/datas/medium.png",
     "devpost": "https://devpost.com/software/stellar-ktiy3h",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "Immerse the Bay 2024"
   },
   {
     "title": "InstaRizz",
     "description": "InstaRizz is a wearable enabled smart application that allows you to recongize people based on the video feed of your Meta Ray Bans, providing scraped information about them and pickup lines to use.",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/098/860/datas/medium.png",
     "devpost": "https://devpost.com/software/magicloops",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "AI ATL 24"
   },
   {
     "title": "Elevate",
     "description": "Empowering Homelessness Through Community Crowdfunding and Prioritisation",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/090/232/datas/medium.png",
     "devpost": "https://devpost.com/software/elevate-pklvrh",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "Cal Hacks 11.0"
   },
   {
     "title": "SwarmAid",
     "description": "Feeding communities, reducing waste with Swarm intelligence",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/077/214/datas/medium.png",
     "devpost": "https://devpost.com/software/swarmaid",
-    "isWinner": true
+    "isWinner": true,
+    "hackathon": "Hack Dearborn: Rewind Reality"
   },
   {
     "title": "Disco Match",
     "description": "Find YOUR perfect hackathon team powered by AI! Live at https://girlhacks.vercel.app",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/003/050/449/datas/medium.png",
     "devpost": "https://devpost.com/software/disco-de-match",
-    "isWinner": true
+    "isWinner": true,
+    "hackathon": "GirlHacks 2024"
   },
   {
     "title": "Editly",
     "description": "AI-powered video editing that follows the latest social media trends, helping you boost your personal brand effortlessly.",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/038/825/datas/medium.png",
     "devpost": "https://devpost.com/software/editly-3ud79g",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "PennApps XXV"
   },
   {
     "title": "Legal-Ease",
     "description": "Focus on business. We'll handle the law!",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/932/266/datas/medium.png",
     "devpost": "https://devpost.com/software/legal-ease-jqu34d",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "UC Berkeley AI Hackathon 2024"
   },
   {
     "title": "SpaceTro",
     "description": "Empowering young astronauts of tomorrow",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/906/005/datas/medium.png",
     "devpost": "https://devpost.com/software/spacetro",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "VenusHacks 2024"
   },
   {
     "title": "BobaBae",
     "description": "Find yourself your Boba Bae",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/897/164/datas/medium.png",
     "devpost": "https://devpost.com/software/bobabae-2xk7ze",
-    "isWinner": false
+    "isWinner": false,
+    "hackathon": "BobHacks 2024"
   },
   {
     "title": "NagaGuard",
     "description": "We aim to help local clinics and hospitals by optimizing the clinical coding process. 🏥",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/866/650/datas/medium.png",
     "devpost": "https://devpost.com/software/nagaguard",
-    "isWinner": true
+    "isWinner": true,
+    "hackathon": "Bearhack 2024"
   },
   {
     "title": "SF Civil Pro",
     "description": "SF Civil Pro is a platform designed to assist civil service professionals in preparing for civil service exam. With study materials and practice tests, SF Civil Pro aims to empower individuals.",
     "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/839/689/datas/medium.png",
     "devpost": "https://devpost.com/software/sf-civil-pro",
-    "isWinner": true
+    "isWinner": true,
+    "hackathon": "SFHacks 2024"
+  },
+  {
+    "title": "EcoMaps",
+    "description": "An Android app that educates civilians on water safety from 2,000+ water treatment stations all across California.",
+    "image": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/839/689/datas/medium.png",
+    "devpost": "https://www.linkedin.com/posts/riancorcino_california-softwareengineer-computerscience-activity-7169035138461356033-qp0N",
+    "isWinner": true,
+    "hackathon": "FullyHacks 2024"
   }
 ]
