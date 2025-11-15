@@ -9,7 +9,7 @@ const experiences = [
     position: "AI Engineer Intern",
     period: "Jul. 2025 – Present",
     location: "Pasadena, CA",
-    logo: "/assets/ayzenberg.png",
+    logo: "/assets/ayzenberg.jpg",
     responsibilities: [
       <>Developing internal Copilot agents adopted by <strong>160+</strong> employees, automating <strong>14+</strong> cross-department workflows spanning HR, finance, and project management; reduced manual task time by <strong>40%</strong> and enabled instant access to company data</>,
       <>Achieved <strong>98%</strong> response accuracy and <strong>200ms</strong> query latency through optimized Azure RAG pipelines</>,
@@ -28,6 +28,18 @@ const experiences = [
       <>Reduced search latency by <strong>200 ms</strong> by integrating meeting summaries with C#, Azure Functions, and Kafka</>,
       <>Increased query retrieval efficiency by <strong>15%</strong> by optimizing search pipeline with Microsoft Knowledge Graph</>,
       <>Learned and applied Microsoft’s internal AGILE development framework through weekly sprints</>,
+    ],
+  },
+  {
+    company: 'OHDC',
+    position: 'Software Engineer Intern',
+    period: 'Oct. 2023 - Apr. 2024',
+    location: 'Los Angeles, CA',
+    logo: '/assets/ohdc.jpg',
+    responsibilities: [
+      <>Built an Android app using Kotlin to educate <strong>68,000+</strong> farmers on pesticide safety and heat stress management</>,
+      <>Implemented table partitioning using BigQuery to replace static data, reducing update time by <strong>90%</strong></>,
+      <>Enhanced accessibility by automating translating for <strong>3+</strong> languages for Hispanic farmers using localization</>,
     ],
   },
   {
