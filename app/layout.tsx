@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import LightningBackground from "@/components/lightning-background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900`}>
+        <LightningBackground />
+        <div className="relative z-10 min-h-screen">
           <Navbar />
           {children}
           <Footer />

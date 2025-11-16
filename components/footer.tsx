@@ -14,7 +14,7 @@ const pageLinks = ["Home", "About", "Experience", "Projects", "Resume"]
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-blue-800 text-white py-12 px-4">
+    <footer id="contact" className="bg-gray-900/50 backdrop-blur-sm border-t border-yellow-400/20 text-white py-12 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center max-w-4xl mx-auto mb-12 gap-8">
           {/* Left side: Page Links */}
@@ -29,7 +29,7 @@ export default function Footer() {
               <a
                 key={index}
                 href={`#${item.toLowerCase()}`}
-                className="text-blue-200 hover:text-white transition-colors duration-300 text-lg"
+                className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-lg"
               >
                 {item}
               </a>
@@ -48,7 +48,7 @@ export default function Footer() {
               <a
                 key={index}
                 href={link.href}
-                className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors duration-300"
+                className="bg-yellow-400/10 hover:bg-yellow-400/20 text-yellow-400 p-3 rounded-full transition-colors duration-300"
                 aria-label={link.label}
               >
                 {link.icon}
@@ -66,7 +66,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <p className="text-blue-200 text-sm">
+            <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Rian Corcino. All rights reserved.
             </p>
           </motion.div>

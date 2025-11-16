@@ -29,23 +29,7 @@ const skills = {
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white relative">
-      {/* Lightning Effect Background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, x: -100, y: -100 }}
-          whileInView={{ opacity: 0.05, x: 0, y: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute top-20 left-20 w-64 h-64 bg-blue-600 rounded-full filter blur-3xl"
-        />
-        <motion.div
-          initial={{ opacity: 0, x: 100, y: 100 }}
-          whileInView={{ opacity: 0.05, x: 0, y: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute bottom-20 right-20 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl"
-        />
-      </div>
-
+    <section id="about" className="py-20 relative">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,8 +38,8 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+          <div className="w-20 h-1 bg-yellow-400 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -67,12 +51,12 @@ export default function About() {
             className="space-y-6"
           >
             <div className="flex items-start space-x-4">
-              <div className="bg-blue-100 p-3 rounded-lg text-blue-600">
+              <div className="bg-yellow-400/20 p-3 rounded-lg text-yellow-400">
                 <User size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Who I Am</h3>
-                <div className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-semibold text-white mb-2">Who I Am</h3>
+                <div className="text-gray-300 leading-relaxed">
                   <p>
                     👋 Hey there! I&apos;m Rian, an aspiring <strong>Software Engineer</strong> who&apos;s obsessed with
                     enhancing everyday tasks with AI.
@@ -89,11 +73,11 @@ export default function About() {
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="bg-blue-100 p-3 rounded-lg text-blue-600">
+              <div className="bg-yellow-400/20 p-3 rounded-lg text-yellow-400">
                 <GraduationCap size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Education</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">Education</h3>
                 <div className="space-y-6">
                   <SchoolItem 
                     logo="/assets/wgu-logo.png"
@@ -121,8 +105,8 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative z-10 bg-white p-6 rounded-lg shadow-xl border border-blue-100">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Technical Skills</h3>
+            <div className="relative z-10 bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-yellow-400/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Technical Skills</h3>
 
               <div className="grid gap-6">
                 {Object.entries(skills).map(([key, category], index) => (
@@ -134,8 +118,8 @@ export default function About() {
                     viewport={{ once: true }}
                   >
                     <div className="flex items-center gap-2 mb-3">
-                      <div className="bg-blue-100 p-2 rounded-md text-blue-600">{category.icon}</div>
-                      <h4 className="font-semibold text-gray-800">{category.title}</h4>
+                      <div className="bg-yellow-400/20 p-2 rounded-md text-yellow-400">{category.icon}</div>
+                      <h4 className="font-semibold text-white">{category.title}</h4>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {category.items.map((item, i) => (
@@ -150,7 +134,7 @@ export default function About() {
                             stiffness: 100,
                           }}
                           viewport={{ once: true }}
-                          className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
+                          className="bg-yellow-400/10 text-yellow-400 border border-yellow-400/30 px-3 py-1 rounded-full text-sm font-medium hover:bg-yellow-400/20 transition-all duration-300 hover:-translate-y-0.5"
                         >
                           {item}
                         </motion.span>
@@ -162,8 +146,8 @@ export default function About() {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-100 rounded-lg z-0"></div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-100 rounded-lg z-0"></div>
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-yellow-400/10 rounded-lg z-0"></div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-yellow-400/10 rounded-lg z-0"></div>
           </motion.div>
         </div>
       </div>

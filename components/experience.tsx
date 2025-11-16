@@ -58,17 +58,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-blue-50 relative">
-      {/* Lightning Effect Background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0.05, 0.1, 0.05] }}
-          transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl"
-        />
-      </div>
-
+    <section id="experience" className="py-20 relative">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,13 +67,13 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Work Experience</h2>
-          <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Work Experience</h2>
+          <div className="w-20 h-1 bg-yellow-400 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 hidden md:block"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-yellow-400/20 hidden md:block"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (

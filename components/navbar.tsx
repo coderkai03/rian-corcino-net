@@ -44,13 +44,13 @@ export default function Navbar() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 bg-white/80 backdrop-blur-sm z-40 md:hidden"
+          className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm z-40 md:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
       
       <header
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-900/80 backdrop-blur-md border-b border-yellow-400/20"
       >
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -60,7 +60,7 @@ export default function Navbar() {
               transition={{ duration: 0.5 }}
               className="flex items-center"
             >
-              <Link href="/" className="text-2xl font-bold text-blue-800 flex items-center">
+              <Link href="/" className="text-2xl font-bold text-yellow-400 flex items-center hover:text-yellow-300 transition-colors">
                 <span className="mr-1">⚡</span> Rian Corcino
               </Link>
             </motion.div>
@@ -81,10 +81,10 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 relative group pb-1`}
+                    className={`text-gray-300 hover:text-yellow-400 font-medium transition-colors duration-300 relative group pb-1`}
                   >
                     {link.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </motion.li>
               ))}
@@ -96,7 +96,7 @@ export default function Navbar() {
                 onMouseEnter={() => setIsMoreOpen(true)}
                 onMouseLeave={() => setIsMoreOpen(false)}
               >
-                <button className="text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 flex items-center gap-1">
+                <button className="text-gray-300 hover:text-yellow-400 font-medium transition-colors duration-300 flex items-center gap-1">
                   More <ChevronDown size={16} className={`transition-transform duration-200 ${isMoreOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {isMoreOpen && (
@@ -107,13 +107,13 @@ export default function Navbar() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-[calc(100%+0.5rem)] left-0 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
+                      className="absolute top-[calc(100%+0.5rem)] left-0 w-48 bg-gray-800 rounded-lg shadow-lg border border-yellow-400/20 py-2 z-50"
                     >
                       {moreLinks.map((link, index) => (
                         <Link
                           key={index}
                           href={link.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-200"
+                          className="block px-4 py-2 text-gray-300 hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors duration-200"
                         >
                           {link.name}
                         </Link>
@@ -128,7 +128,7 @@ export default function Navbar() {
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-700 hover:text-blue-800 transition-colors duration-300"
+                className="text-gray-300 hover:text-yellow-400 transition-colors duration-300"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -155,7 +155,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 block"
+                      className="text-gray-300 hover:text-yellow-400 font-medium transition-colors duration-300 block"
                     >
                       {link.name}
                     </Link>
@@ -166,7 +166,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
                 >
-                  <div className="text-gray-700 font-medium">More</div>
+                  <div className="text-gray-300 font-medium">More</div>
                   <ul className="ml-4 mt-2 space-y-2">
                     {moreLinks.map((link, index) => (
                       <motion.li
@@ -178,7 +178,7 @@ export default function Navbar() {
                         <Link
                           href={link.href}
                           onClick={() => setIsOpen(false)}
-                          className="text-gray-700 hover:text-blue-800 font-medium transition-colors duration-300 block"
+                          className="text-gray-300 hover:text-yellow-400 font-medium transition-colors duration-300 block"
                         >
                           {link.name}
                         </Link>

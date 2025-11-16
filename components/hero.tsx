@@ -6,29 +6,15 @@ import Image from "next/image"
 
 export default function Hero() {
   const sequence = [
-    "I'm an aspiring Software Engineer", 2000,
-    "I'm an aspiring AI Engineer", 2000,
-    "I'm a Content Creator", 2000,
-    "I'm a Hack(athon)er", 2000,
-    "I'm a Duolingo Nerd", 2000,
+    "I strike with innovation ⚡", 2000,
+    "I electrify with creativity ⚡", 2000,
+    "I spark revolutionary ideas ⚡", 2000,
+    "I power the future ⚡", 2000,
+    "I channel pure energy ⚡", 2000,
   ]
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-      {/* Lightning Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0.1, 0.3, 0.1] }}
-          transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl opacity-10"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 7, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
-          className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-blue-300 rounded-full filter blur-3xl opacity-10"
-        />
-      </div>
 
       {/* Responsive right-side image: Full background on desktop, circular profile on mobile */}
       {/* Desktop: background image with gradient fade */}
@@ -42,7 +28,7 @@ export default function Hero() {
             priority
             style={{ objectPosition: "center bottom" }}
           />
-          <div className="absolute inset-y-0 left-0 w-1/8 bg-gradient-to-r from-white via-white/80 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-1/8 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent" />
         </div>
       </div>
 
@@ -54,7 +40,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="sm:hidden flex-1 flex justify-center md:justify-end"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-400 shadow-xl shadow-yellow-400/30">
               <Image
                 src="/assets/HEADSHOT.jpg"
                 alt="Rian Corcino"
@@ -75,7 +61,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
             >
               Hi, I&apos;m Rian Corcino
             </motion.h1>
@@ -84,7 +70,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xl md:text-2xl lg:text-3xl text-blue-600 font-medium mb-6 h-16"
+              className="text-xl md:text-2xl lg:text-3xl text-yellow-400 font-medium mb-6 h-16"
             >
               <TypeAnimation
                 sequence={sequence}
@@ -103,7 +89,7 @@ export default function Hero() {
             >
               <a
                 href="#projects"
-                className="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-blue-300/50 flex items-center group"
+                className="px-6 py-3 bg-yellow-400 text-gray-900 rounded-full font-medium hover:bg-yellow-300 transition-colors duration-300 shadow-lg hover:shadow-yellow-400/50 flex items-center group"
               >
                 View My Work
                 <svg
@@ -123,7 +109,7 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors duration-300"
+                className="px-6 py-3 bg-transparent text-yellow-400 border-2 border-yellow-400 rounded-full font-medium hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300"
               >
                 Contact Me
               </a>
@@ -144,7 +130,7 @@ export default function Hero() {
       >
         <a
           href="#about"
-          className="flex flex-col items-center text-gray-500 hover:text-blue-600 transition-colors duration-300"
+          className="flex flex-col items-center text-gray-400 hover:text-yellow-400 transition-colors duration-300"
         >
           <span className="text-sm mb-2">Scroll Down</span>
           <svg
