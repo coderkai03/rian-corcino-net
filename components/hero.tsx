@@ -22,6 +22,7 @@ export default function Hero() {
           transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl opacity-10"
         />
+        
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: [0.1, 0.2, 0.1] }}
