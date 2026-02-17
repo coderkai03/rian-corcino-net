@@ -7,7 +7,7 @@ const socialLinks = [
   { icon: <Github size={24} />, href: "https://github.com/coderkai03", label: "Github" },
   { icon: <Linkedin size={24} />, href: "https://www.linkedin.com/in/riancorcino/", label: "LinkedIn" },
   { icon: <Instagram size={24} />, href: "https://www.instagram.com/rian.corcino/", label: "Instagram" },
-  { icon: <Mail size={24} />, href: "mailto:rian@corcino.net", label: "Email" },
+  { icon: <Mail size={24} />, href: "mailto:riancorci@gmail.com", label: "Email" },
 ]
 
 const pageLinks = ["Home", "About", "Experience", "Projects", "Resume"]
