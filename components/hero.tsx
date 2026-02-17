@@ -34,7 +34,9 @@ export default function Hero() {
       {/* Responsive right-side image: Full background on desktop, circular profile on mobile */}
       {/* Desktop: background image with gradient fade */}
       <div className="hidden sm:flex pointer-events-none absolute inset-y-0 right-0 w-1/2 items-stretch">
-        <div className="relative h-full w-full">
+        <div
+          className="relative h-full w-full [mask-image:linear-gradient(to_right,transparent_0%,black_35%)] [mask-size:auto] [mask-repeat:no-repeat]"
+        >
           <Image
             src="/assets/palace-of-one-fine-art.jpg"
             alt="Rian Corcino"
@@ -43,7 +45,6 @@ export default function Hero() {
             priority
             style={{ objectPosition: "center bottom" }}
           />
-          <div className="absolute inset-y-0 left-0 w-1/8 bg-gradient-to-r from-white via-white/80 to-transparent" />
         </div>
       </div>
 
