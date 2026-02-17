@@ -13,7 +13,7 @@ export default function Hero() {
     "I'm a Duolingo Nerd", 2000,
   ]
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen h-screen sm:h-auto flex items-start sm:items-center justify-center pt-16 relative overflow-hidden">
       {/* Lightning Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -31,8 +31,21 @@ export default function Hero() {
         />
       </div>
 
-      {/* Responsive right-side image: Full background on desktop, circular profile on mobile */}
-      {/* Desktop: background image with gradient fade */}
+      {/* Mobile: full-bleed background image */}
+      <div className="sm:hidden pointer-events-none absolute inset-0">
+        <div className="relative h-full w-full">
+          <Image
+            src="/assets/palace-of-one-fine-art.jpg"
+            alt=""
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60" />
+        </div>
+      </div>
+
+      {/* Desktop: right-side image with gradient fade */}
       <div className="hidden sm:flex pointer-events-none absolute inset-y-0 right-0 w-1/2 items-stretch">
         <div
           className="relative h-full w-full [mask-image:linear-gradient(to_right,transparent_0%,black_35%)] [mask-size:auto] [mask-repeat:no-repeat]"
@@ -48,88 +61,40 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 py-12 md:py-24">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-        <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="sm:hidden flex-1 flex justify-center md:justify-end"
-          >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-              <Image
-                src="/assets/HEADSHOT.jpg"
-                alt="Rian Corcino"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent"></div>
-            </div>
-          </motion.div>
+      <div className="container relative z-10 mx-auto px-6 py-12 md:py-24 flex flex-col sm:block sm:min-h-0">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 flex-initial sm:flex-initial">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative z-10 flex-1 text-center md:text-left"
+            className="relative z-10 flex-initial sm:flex-1 flex flex-col w-full text-center md:text-left sm:justify-start"
           >
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4"
-            >
-              Hi, I&apos;m Rian Corcino
-            </motion.h1>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xl md:text-2xl lg:text-3xl text-blue-600 font-medium mb-6 h-16"
-            >
-              <TypeAnimation
-                sequence={sequence}
-                wrapper="span"
-                speed={50}
-                repeat={Number.POSITIVE_INFINITY}
-                className="inline-block"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="flex flex-wrap gap-4 justify-center md:justify-start"
-            >
-              <a
-                href="#projects"
-                className="px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-blue-300/50 flex items-center group"
+            {/* Intro text — 25% down on mobile, then buttons directly below */}
+            <div className="pt-[10vh] sm:pt-0">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white sm:text-gray-800 mb-4 drop-shadow-lg sm:drop-shadow-none"
               >
-                View My Work
-                <svg
-                  className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  ></path>
-                </svg>
-              </a>
-              <a
-                href="#contact"
-                className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors duration-300"
+                Hi, I&apos;m Rian Corcino
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-xl md:text-2xl lg:text-3xl text-white sm:text-blue-600 font-medium mb-2 sm:mb-6 h-16"
               >
-                Contact Me
-              </a>
-            </motion.div>
+                <TypeAnimation
+                  sequence={sequence}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Number.POSITIVE_INFINITY}
+                  className="inline-block"
+                />
+              </motion.div>
+            </div>
           </motion.div>
 
           {/* Spacer to preserve layout on larger screens */}
@@ -137,16 +102,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
+      {/* Scroll Down Indicator — at bottom; white on mobile for contrast on image */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
       >
         <a
           href="#about"
-          className="flex flex-col items-center text-gray-500 hover:text-blue-600 transition-colors duration-300"
+          className="flex flex-col items-center text-white/90 hover:text-white sm:text-gray-500 sm:hover:text-blue-600 transition-colors duration-300"
         >
           <span className="text-sm mb-2">Scroll Down</span>
           <svg
