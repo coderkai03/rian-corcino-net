@@ -1,4 +1,3 @@
-import { Calendar, MapPin } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import type { ReactNode } from "react"
@@ -14,59 +13,61 @@ interface WorkItemProps {
 }
 
 export default function WorkItem({ company, position, period, location, logo, responsibilities, index }: WorkItemProps) {
+  const num = String(index + 1).padStart(2, "0")
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, delay: index * 0.1 }}
+      transition={{ duration: 0.6, delay: index * 0.08 }}
       viewport={{ once: true }}
-      className="relative"
+      className="group relative border-b border-[#ffd000]/10 py-10 hover:border-l-4 hover:border-l-[#ffd000] hover:pl-4 transition-all duration-200"
     >
-      <div className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-        {/* Timeline Dot */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-blue-600 rounded-full border-4 border-white hidden md:block"></div>
+      {/* Top row: number + company info + logo */}
+      <div className="flex items-start gap-6 mb-6">
+        {/* Big number */}
+        <span
+          className="text-7xl font-bold text-[#ffd000]/25 group-hover:text-[#ffd000]/70 transition-colors duration-300 leading-none select-none flex-shrink-0 hidden sm:block"
+          style={{ fontFamily: 'var(--font-oswald)' }}
+        >
+          {num}
+        </span>
 
-        {/* Content Card */}
-        <div className="w-full md:w-5/12 mb-8 md:mb-0">
-          <div className="bg-white p-6 rounded-lg shadow-lg border border-blue-100 hover:shadow-xl transition-shadow duration-300 h-full">
-            <div className="flex items-center mb-4">
-              <div className="relative w-16 h-16 mr-4 overflow-hidden">
-                <Image src={logo || "/placeholder.svg"} alt={company} fill className="object-cover" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800">{company}</h3>
-                <p className="text-blue-600 font-medium">{position}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center text-gray-500 text-sm mb-4 space-x-4">
-              <div className="flex items-center">
-                <Calendar size={14} className="mr-1" />
-                <span>{period}</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin size={14} className="mr-1" />
-                <span>{location}</span>
-              </div>
-            </div>
-
-            <ul className="space-y-2 text-gray-600">
-              {responsibilities.map((item, i) => (
-                <li key={i} className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+        {/* Company + position + meta */}
+        <div className="flex-1 min-w-0">
+          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-1">
+            <h3
+              className="text-2xl md:text-3xl font-bold text-white"
+              style={{ fontFamily: 'var(--font-oswald)' }}
+            >
+              {company}
+            </h3>
+            <span className="text-[#ff6a00] text-lg font-medium" style={{ fontFamily: 'var(--font-oswald)' }}>
+              {position}
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-4 text-[#b0b0c8] text-sm">
+            <span>{period}</span>
+            <span className="text-[#ffd000]/40">·</span>
+            <span>{location}</span>
           </div>
         </div>
 
-        {/* Empty Space for Timeline */}
-        <div className="w-full md:w-2/12"></div>
-
-        {/* Date for Desktop */}
-        <div className="hidden md:block w-full md:w-5/12"></div>
+        {/* Logo */}
+        <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+          <Image src={logo || "/placeholder.svg"} alt={company} fill className="object-contain" />
+        </div>
       </div>
+
+      {/* Responsibilities */}
+      <ul className="space-y-2 text-[#c0c0d5] text-base pl-0 sm:pl-[calc(theme(spacing.7)+1.5rem+1.5rem)]">
+        {responsibilities.map((item, i) => (
+          <li key={i} className="flex items-start gap-3">
+            <span className="text-[#ffd000]/60 mt-1 flex-shrink-0">—</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </motion.div>
   )
-} 
+}

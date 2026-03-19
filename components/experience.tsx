@@ -27,7 +27,7 @@ const experiences = [
       <>Enhanced Microsoft Copilot catch-up search accuracy by <strong>7%</strong> by optimizing queries with Azure Search</>,
       <>Reduced search latency by <strong>200 ms</strong> by integrating meeting summaries with C#, Azure Functions, and Kafka</>,
       <>Increased query retrieval efficiency by <strong>15%</strong> by optimizing search pipeline with Microsoft Knowledge Graph</>,
-      <>Learned and applied Microsoft’s internal AGILE development framework through weekly sprints</>,
+      <>Learned and applied Microsoft&apos;s internal AGILE development framework through weekly sprints</>,
     ],
   },
   {
@@ -58,41 +58,29 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-blue-50 relative">
-      {/* Lightning Effect Background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <section id="experience" className="py-24 bg-[#08080f] clip-top relative">
+      <div className="container mx-auto px-6 lg:px-16">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0.05, 0.1, 0.05] }}
-          transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
-          className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl"
-        />
-      </div>
-
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Work Experience</h2>
-          <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full"></div>
+          <h2
+            className="text-4xl md:text-5xl font-bold text-white border-l-4 border-[#ffd000] pl-6"
+            style={{ fontFamily: 'var(--font-oswald)' }}
+          >
+            WORK EXPERIENCE
+          </h2>
         </motion.div>
 
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 hidden md:block"></div>
-
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <WorkItem key={index} {...exp} index={index} />
-            ))}
-          </div>
+        <div className="space-y-0">
+          {experiences.map((exp, index) => (
+            <WorkItem key={index} {...exp} index={index} />
+          ))}
         </div>
       </div>
     </section>
   )
 }
-

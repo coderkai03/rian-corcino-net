@@ -9,22 +9,14 @@ export function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 500) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
+      setIsVisible(window.scrollY > 500)
     }
-
     window.addEventListener("scroll", toggleVisibility)
     return () => window.removeEventListener("scroll", toggleVisibility)
   }, [])
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    })
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   return (
@@ -36,13 +28,12 @@ export function ScrollToTop() {
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 z-50"
+          className="fixed bottom-6 right-6 p-3 border border-[#ffd000] text-[#ffd000] bg-transparent hover:bg-[#ffd000] hover:text-black transition-all duration-200 z-50 shadow-[0_0_12px_rgba(255,208,0,0.2)]"
           aria-label="Scroll to top"
         >
-          <ChevronUp size={24} />
+          <ChevronUp size={22} />
         </motion.button>
       )}
     </AnimatePresence>
   )
 }
-
