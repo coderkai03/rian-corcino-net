@@ -202,6 +202,11 @@ export default function LightningEffects() {
             display: "flex",
             alignItems: "center",
             gap: 8,
+            background: "rgba(6,6,10,0.65)",
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+            border: "1px solid rgba(255,208,0,0.25)",
+            padding: "8px 18px 8px 14px",
           }}
         >
           <svg width="14" height="22" viewBox="0 0 18 32" style={{ flexShrink: 0 }}>
