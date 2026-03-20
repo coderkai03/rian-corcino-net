@@ -1,29 +1,88 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code2, Blocks, Wrench, Zap } from "lucide-react"
+import { Code2, Blocks, Wrench, Zap, Key, Coffee, Hash, Database, Brain, BarChart2, Cloud } from "lucide-react"
 import SchoolItem from './school-item'
+import {
+  SiJavascript, SiTypescript, SiCplusplus, SiPython, SiMysql, SiKotlin, SiHtml5,
+  SiReact, SiNodedotjs, SiNextdotjs, SiFlask, SiMui, SiExpress,
+  SiPostman, SiVercel, SiFirebase, SiGooglecloud, SiSupabase, SiGraphql, SiDocker,
+  SiPandas, SiNumpy, SiOpencv, SiPytorch, SiTensorflow, SiKeras, SiOpenai,
+} from "react-icons/si"
+import type { ReactNode } from "react"
 
-const skills = {
+interface SkillItem {
+  label: string
+  icon: ReactNode
+  color: string
+}
+
+interface SkillCategory {
+  title: string
+  icon: ReactNode
+  items: SkillItem[]
+}
+
+const skills: Record<string, SkillCategory> = {
   languages: {
     title: "Languages",
     icon: <Code2 className="w-4 h-4" />,
-    items: ["JavaScript", "Java", "C/C++", "C#", "Python", "SQL", "Kotlin", "HTML/CSS", "XML"],
+    items: [
+      { label: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
+      { label: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
+      { label: "Java", icon: <Coffee size={14} />, color: "#ED8B00" },
+      { label: "C/C++", icon: <SiCplusplus />, color: "#00599C" },
+      { label: "C#", icon: <Hash size={14} />, color: "#239120" },
+      { label: "Python", icon: <SiPython />, color: "#3776AB" },
+      { label: "SQL", icon: <SiMysql />, color: "#4479A1" },
+      { label: "Kotlin", icon: <SiKotlin />, color: "#7F52FF" },
+      { label: "HTML/CSS", icon: <SiHtml5 />, color: "#E34F26" },
+    ],
   },
   frameworks: {
     title: "Frameworks",
     icon: <Blocks className="w-4 h-4" />,
-    items: ["ReactJS", "Node.js", "Next.js", "TypeScript", "Flask", "Material UI"],
+    items: [
+      { label: "React", icon: <SiReact />, color: "#61DAFB" },
+      { label: "Node.js", icon: <SiNodedotjs />, color: "#339933" },
+      { label: "Next.js", icon: <SiNextdotjs />, color: "#ffffff" },
+      { label: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
+      { label: "Flask", icon: <SiFlask />, color: "#ffffff" },
+      { label: "Material UI", icon: <SiMui />, color: "#007FFF" },
+      { label: "ExpressJS", icon: <SiExpress />, color: "#ffffff" },
+    ],
   },
   tools: {
     title: "Developer Tools",
     icon: <Wrench className="w-4 h-4" />,
-    items: ["Git", "Postman", "Vercel", "Firebase", "Clerk", "Google Console", "Supabase"],
+    items: [
+      { label: "Postman", icon: <SiPostman />, color: "#FF6C37" },
+      { label: "Vercel", icon: <SiVercel />, color: "#ffffff" },
+      { label: "Firebase", icon: <SiFirebase />, color: "#FFCA28" },
+      { label: "Clerk", icon: <Key size={14} />, color: "#ffd000" },
+      { label: "GCP", icon: <SiGooglecloud />, color: "#4285F4" },
+      { label: "Supabase", icon: <SiSupabase />, color: "#3ECF8E" },
+      { label: "GraphQL", icon: <SiGraphql />, color: "#E10098" },
+      { label: "Docker", icon: <SiDocker />, color: "#2496ED" },
+      { label: "ChromaDB", icon: <Database size={14} />, color: "#ffd000" },
+      { label: "Azure AI Foundry", icon: <Cloud size={14} />, color: "#0078D4" },
+    ],
   },
   libraries: {
     title: "Libraries",
     icon: <Zap className="w-4 h-4" />,
-    items: ["Pandas", "Keras", "Pytorch", "OpenAI", "Gemini", "Vercel"],
+    items: [
+      { label: "OpenAI", icon: <SiOpenai />, color: "#ffffff" },
+      { label: "Anthropic", icon: <Brain size={14} />, color: "#ffd000" },
+      { label: "NumPy", icon: <SiNumpy />, color: "#013243" },
+      { label: "Pandas", icon: <SiPandas />, color: "#150458" },
+      { label: "Scikit Learn", icon: <BarChart2 size={14} />, color: "#F7931E" },
+      { label: "MatplotLib", icon: <BarChart2 size={14} />, color: "#11557C" },
+      { label: "OpenCV", icon: <SiOpencv />, color: "#5C3EE8" },
+      { label: "PyTorch", icon: <SiPytorch />, color: "#EE4C2C" },
+      { label: "TensorFlow", icon: <SiTensorflow />, color: "#FF6F00" },
+      { label: "Keras", icon: <SiKeras />, color: "#D00000" },
+    ],
   },
 }
 
@@ -141,10 +200,13 @@ export default function About() {
                     {category.items.map((item, i) => (
                       <span
                         key={i}
-                        className="border border-[#ffd000]/40 text-[#ffd000] px-4 py-1.5 text-sm font-medium hover:border-[#ffd000]/80 hover:bg-[#ffd000]/5 hover:-translate-y-0.5 transition-all duration-200 cursor-default"
+                        className="flex items-center gap-1.5 border border-[#ffd000]/40 text-[#ffd000] px-3 py-1.5 text-sm font-medium hover:border-[#ffd000]/80 hover:bg-[#ffd000]/5 hover:-translate-y-0.5 transition-all duration-200 cursor-default"
                         style={{ fontFamily: 'var(--font-oswald)' }}
                       >
-                        {item}
+                        <span style={{ color: item.color, display: "flex", alignItems: "center", fontSize: "1rem" }}>
+                          {item.icon}
+                        </span>
+                        {item.label}
                       </span>
                     ))}
                   </div>

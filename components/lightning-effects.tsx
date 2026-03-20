@@ -63,6 +63,7 @@ export default function LightningEffects() {
   const cursorRef = useRef<SVGSVGElement>(null)
   const rafRef = useRef<number>(0)
   const mouseRef = useRef({ x: -100, y: -100 })
+  const isHoveringButton = useRef(false)
   const [strikes, setStrikes] = useState<(Strike & { opacity: number; drawing: boolean })[]>([])
   const [isTouch, setIsTouch] = useState(false)
   const [hasClicked, setHasClicked] = useState(false)
@@ -74,11 +75,21 @@ export default function LightningEffects() {
     }
     window.addEventListener("mousemove", onMove, { passive: true })
 
+    const onOver = (e: MouseEvent) => {
+      const el = e.target as Element
+      isHoveringButton.current = !!el.closest('button, a, [role="button"], input[type="submit"]')
+    }
+    const onOut = () => { isHoveringButton.current = false }
+    document.addEventListener("mouseover", onOver, { passive: true })
+    document.addEventListener("mouseout", onOut, { passive: true })
+
     const loop = () => {
       if (cursorRef.current) {
         const { x, y } = mouseRef.current
-        // translate to mouse, rotate around that origin, then offset so tip (9,0) aligns with cursor
-        cursorRef.current.style.transform = `translate(${x}px, ${y}px) rotate(15deg) translate(-9px, 0px)`
+        const jx = isHoveringButton.current ? (Math.random() - 0.5) * 4 : 0
+        const jy = isHoveringButton.current ? (Math.random() - 0.5) * 4 : 0
+        const rot = isHoveringButton.current ? 15 + (Math.random() - 0.5) * 6 : 15
+        cursorRef.current.style.transform = `translate(${x + jx}px, ${y + jy}px) rotate(${rot}deg) translate(-9px, -16px)`
       }
       rafRef.current = requestAnimationFrame(loop)
     }
@@ -86,6 +97,8 @@ export default function LightningEffects() {
 
     return () => {
       window.removeEventListener("mousemove", onMove)
+      document.removeEventListener("mouseover", onOver)
+      document.removeEventListener("mouseout", onOut)
       cancelAnimationFrame(rafRef.current)
     }
   }, [])

@@ -54,8 +54,13 @@ body {
   cursor: none;
 }
 
+*, *::before, *::after {
+  cursor: none !important;
+}
+
 @media (hover: none) {
   body { cursor: auto; }
+  *, *::before, *::after { cursor: auto !important; }
 }
 
 .clip-bottom {

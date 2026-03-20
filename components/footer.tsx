@@ -6,14 +6,14 @@ const socialLinks = [
   { icon: <Github size={20} />, href: "https://github.com/coderkai03", label: "Github" },
   { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/riancorcino/", label: "LinkedIn" },
   { icon: <Instagram size={20} />, href: "https://www.instagram.com/rian.corcino/", label: "Instagram" },
-  { icon: <Mail size={20} />, href: "mailto:riancorci@gmail.com", label: "Email" },
+  { icon: <Mail size={20} />, href: "mailto:rian@corcino.net", label: "Email" },
 ]
 
 const pageLinks = ["Home", "About", "Experience", "Projects", "Resume"]
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-[#03030a] text-white py-10 px-6 border-t-2 border-[#ffd000]/30">
+    <footer className="bg-[#03030a] text-white py-10 px-6 border-t-2 border-[#ffd000]/30">
       <div className="container mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-start gap-8">
           {/* Brand */}
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           {/* Socials */}
-          <div className="flex gap-3">
+          <div className="flex gap-3 mr-16">
             {socialLinks.map((link, index) => (
               <a
                 key={index}

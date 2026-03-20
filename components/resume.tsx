@@ -37,7 +37,7 @@ export default function Resume() {
         {/* Desktop iframe */}
         <div className="hidden md:block">
           <iframe
-            src="/assets/Rian_Corcino_Resume_DISPLAY.pdf"
+            src="/assets/Rian_Corcino_Resume_DISPLAY.pdf#navpanes=0"
             className="w-full max-w-5xl h-screen max-h-[800px] shadow-lg border-l-4 border-[#ffd000]"
             title="Resume"
           />

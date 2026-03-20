@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Link from "next/link"
 import projectsData from "@/data/projects.json"
 import ProjectItem from "./project-item"
 
@@ -48,13 +47,15 @@ export default function Projects() {
 
         {projectsData.length > 4 && (
           <div className="mt-12 pl-0">
-            <Link
-              href="/projects"
+            <a
+              href="https://devpost.com/riancorci"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-transparent text-[#ffd000] px-8 py-3 border border-[#ffd000] hover:bg-[#ffd000] hover:text-black transition-all duration-300 font-semibold text-xs tracking-[0.2em] uppercase"
               style={{ fontFamily: 'var(--font-oswald)' }}
             >
               View All Projects
-            </Link>
+            </a>
           </div>
         )}
       </div>

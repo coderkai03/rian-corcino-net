@@ -298,23 +298,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{ duration: 2.5, repeat: Number.POSITIVE_INFINITY, delay: 1.5 }}
-        className="absolute bottom-16 left-1/2 -translate-x-1/2 z-10"
-      >
-        <a
-          href="#about"
-          className="flex flex-col items-center text-[#ffd000]/60 hover:text-[#ffd000] transition-colors duration-300"
-        >
-          <span className="text-xs tracking-[0.2em] uppercase mb-2">Scroll</span>
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </a>
-      </motion.div>
     </section>
   )
 }
