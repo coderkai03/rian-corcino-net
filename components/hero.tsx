@@ -8,6 +8,7 @@ import { useState, useEffect, useRef } from "react"
 interface BoltSurge {
   id: number
   paths: string[]  // 3 alternate jagged paths (same endpoints, different displacement)
+  branches: string[][]  // each branch: 3 flickering variants
   delay: string
   duration: string
 }
@@ -47,7 +48,7 @@ export default function Hero() {
       const containerRect = nameRef.current.getBoundingClientRect()
       const letterSpans = Array.from(nameRef.current.querySelectorAll("[data-letter]"))
 
-      // Build one bolt per letter span, spanning its bounding box edge-to-edge
+      // Build one bolt per letter span with free angle + branching
       const allBolts: Omit<BoltSurge, "id">[] = letterSpans.map(span => {
         const r = span.getBoundingClientRect()
         // Coords relative to container
@@ -58,43 +59,76 @@ export default function Hero() {
         const w = right - left
         const h = bottom - top
 
-        // Randomly choose horizontal or vertical axis
-        const horizontal = Math.random() > 0.35
+        const maxDim = Math.max(w, h)
+
+        // ~45% of bolts shoot outward: one end anchored on letter, other end outside
+        const isOutward = Math.random() < 0.45
         let x1: number, y1: number, x2: number, y2: number
-        if (horizontal) {
-          // Span 40–65% of the letter width, centered randomly within it
-          const span = w * (0.4 + Math.random() * 0.25)
-          const startX = left + Math.random() * (w - span)
-          const y1off = top + h * (0.2 + Math.random() * 0.6)
-          const y2off = top + h * (0.2 + Math.random() * 0.6)
-          x1 = startX;       y1 = y1off
-          x2 = startX + span; y2 = y2off
+
+        if (isOutward) {
+          // Anchor near edge of letter so the bolt clearly exits
+          const anchorX = left + w * (0.15 + Math.random() * 0.7)
+          const anchorY = top + h * (0.15 + Math.random() * 0.7)
+          const outAngle = Math.random() * Math.PI * 2
+          const outLen = maxDim * (0.6 + Math.random() * 0.6)
+          x1 = anchorX
+          y1 = anchorY
+          x2 = anchorX + Math.cos(outAngle) * outLen
+          y2 = anchorY + Math.sin(outAngle) * outLen
         } else {
-          // Span 40–65% of the letter height
-          const span = h * (0.4 + Math.random() * 0.25)
-          const startY = top + Math.random() * (h - span)
-          const x1off = left + w * (0.2 + Math.random() * 0.6)
-          const x2off = left + w * (0.2 + Math.random() * 0.6)
-          x1 = x1off; y1 = startY
-          x2 = x2off; y2 = startY + span
+          // Centered within letter — free angle, moderate length
+          const cx = left + w * (0.1 + Math.random() * 0.8)
+          const cy = top + h * (0.1 + Math.random() * 0.8)
+          const band = Math.floor(Math.random() * 8)
+          const angle = (band * Math.PI / 4) + (Math.random() - 0.5) * (Math.PI / 5)
+          const len = maxDim * (0.35 + Math.random() * 0.45)
+          x1 = cx - Math.cos(angle) * len / 2
+          y1 = cy - Math.sin(angle) * len / 2
+          x2 = cx + Math.cos(angle) * len / 2
+          y2 = cy + Math.sin(angle) * len / 2
         }
 
-        // 3 independently-displaced paths — tighter roughness for tighter wiggle
+        // 3 independently-displaced paths — slightly more roughness for character
         const paths = [
-          pointsToPath(jaggedLine(x1, y1, x2, y2, 0.28, 4)),
-          pointsToPath(jaggedLine(x1, y1, x2, y2, 0.28, 4)),
-          pointsToPath(jaggedLine(x1, y1, x2, y2, 0.28, 4)),
+          pointsToPath(jaggedLine(x1, y1, x2, y2, 0.34, 4)),
+          pointsToPath(jaggedLine(x1, y1, x2, y2, 0.34, 4)),
+          pointsToPath(jaggedLine(x1, y1, x2, y2, 0.34, 4)),
         ]
-        return { paths, delay: "", duration: "" }
+
+        // Derive angle and length from endpoints for branch generation
+        const angle = Math.atan2(y2 - y1, x2 - x1)
+        const len = Math.hypot(x2 - x1, y2 - y1)
+
+        // 0–2 branches forking off the main bolt at random angles
+        const branches: string[][] = []
+        const numBranches = Math.floor(Math.random() * 3)  // 0, 1, or 2
+        for (let b = 0; b < numBranches; b++) {
+          const t = 0.2 + Math.random() * 0.6
+          const bx = x1 + (x2 - x1) * t
+          const by = y1 + (y2 - y1) * t
+          const side = Math.random() > 0.5 ? 1 : -1
+          const branchAngle = angle + side * (Math.PI / 5 + Math.random() * Math.PI / 3)
+          const branchLen = len * (0.28 + Math.random() * 0.32)
+          const ex = bx + Math.cos(branchAngle) * branchLen
+          const ey = by + Math.sin(branchAngle) * branchLen
+          branches.push([
+            pointsToPath(jaggedLine(bx, by, ex, ey, 0.3, 3)),
+            pointsToPath(jaggedLine(bx, by, ex, ey, 0.3, 3)),
+            pointsToPath(jaggedLine(bx, by, ex, ey, 0.3, 3)),
+          ])
+        }
+
+        return { paths, branches, delay: "", duration: "" }
       })
 
-      // Pick 7 letters at random, stagger delays 0.5s apart
-      const shuffled = [...allBolts].sort(() => Math.random() - 0.5).slice(0, 7)
+      // Pick 8 letters at random, stagger delays 0.2s apart, fast cycle
+      const shuffled = [...allBolts].sort(() => Math.random() - 0.5).slice(0, 8)
       setBolts(shuffled.map((b, i) => ({
         paths: b.paths,
+        branches: b.branches,
         id: i,
-        delay: `${(i * 0.5).toFixed(1)}s`,
-        duration: `${(5 + Math.random() * 2.5).toFixed(2)}s`,
+        delay: `${(i * 0.2).toFixed(1)}s`,
+        duration: `${(1.8 + Math.random() * 1.4).toFixed(2)}s`,
       })))
     }, 900)
     return () => clearTimeout(timer)
@@ -227,11 +261,13 @@ export default function Hero() {
                   }}
                 >
                   <defs>
-                    <filter id="surge-glow">
-                      <feGaussianBlur stdDeviation="2.5" result="blur" />
+                    <filter id="surge-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="3" result="blur1" />
+                      <feGaussianBlur stdDeviation="6" result="blur2" />
                       <feMerge>
-                        <feMergeNode in="blur" />
-                        <feMergeNode in="blur" />
+                        <feMergeNode in="blur2" />
+                        <feMergeNode in="blur1" />
+                        <feMergeNode in="blur1" />
                         <feMergeNode in="SourceGraphic" />
                       </feMerge>
                     </filter>
@@ -245,6 +281,7 @@ export default function Hero() {
                         animationDelay: bolt.delay,
                       }}
                     >
+                      {/* Main bolt — 3 flickering paths */}
                       {bolt.paths.map((p, pi) => (
                         <g
                           key={pi}
@@ -256,16 +293,17 @@ export default function Hero() {
                           <path
                             d={p}
                             stroke="#ffd000"
-                            strokeWidth="2.5"
+                            strokeWidth="2"
                             fill="none"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             filter="url(#surge-glow)"
+                            opacity="0.85"
                           />
                           <path
                             d={p}
                             stroke="white"
-                            strokeWidth="1"
+                            strokeWidth="0.8"
                             fill="none"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -273,6 +311,38 @@ export default function Hero() {
                           />
                         </g>
                       ))}
+                      {/* Branches — each also flickers through 3 variants */}
+                      {bolt.branches.map((branchPaths, bi) =>
+                        branchPaths.map((p, pi) => (
+                          <g
+                            key={`b${bi}-${pi}`}
+                            style={{
+                              animation: `surge-cycle 0.09s steps(1, end) infinite`,
+                              animationDelay: `${((pi + bi * 3) * 0.03).toFixed(2)}s`,
+                            }}
+                          >
+                            <path
+                              d={p}
+                              stroke="#ffd000"
+                              strokeWidth="1.2"
+                              fill="none"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              filter="url(#surge-glow)"
+                              opacity="0.6"
+                            />
+                            <path
+                              d={p}
+                              stroke="white"
+                              strokeWidth="0.6"
+                              fill="none"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              opacity="0.5"
+                            />
+                          </g>
+                        ))
+                      )}
                     </g>
                   ))}
                 </svg>
