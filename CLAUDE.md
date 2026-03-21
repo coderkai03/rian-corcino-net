@@ -43,13 +43,23 @@ Reusable UI lives in `components/`. Section components (Hero, About, Experience,
 
 Global client component mounted in the root layout. Three systems:
 
-1. **Custom cursor** — SVG bolt icon (`M 9 0 L 0 16 L 6 16 L 2 32 L 18 12 L 12 12 Z`) that follows the mouse via `requestAnimationFrame` + direct DOM style manipulation (no React re-renders). Transform chain keeps the tip pixel-aligned: `translate(x, y) rotate(15deg) translate(-9px, 0px)`. Hidden on touch devices via `@media (hover: none) { body { cursor: auto } }`.
+1. **Custom cursor** — SVG bolt icon (`M 9 0 L 0 16 L 6 16 L 2 32 L 18 12 L 12 12 Z`) that follows the mouse via `requestAnimationFrame` + direct DOM style manipulation (no React re-renders). Transform chain keeps the tip pixel-aligned: `translate(x, y) rotate(15deg) translate(-9px, 0px)`. On click, vibrates with decaying position (±10px) and rotation (±15°) jitter over 350ms, tracked via `lastClickTime` ref in the RAF loop. Hidden on touch devices via `@media (hover: none) { body { cursor: auto } }`.
 
 2. **Click strike** — On every click, generates a jagged bolt from `(clickX, 0)` to `(clickX, clickY)` using midpoint-displacement recursion (depth 5, ~32 points). Spawns 2–3 branches. Rendered as a fixed full-screen SVG with `feGaussianBlur` glow filter. Animates draw → fade via CSS `opacity` transition; auto-removed from state after 500ms. Multiple simultaneous strikes supported.
 
-3. **Ambient lightning** — Random bolt every 4–9s, depth 3, ~30% opacity. Same generation algorithm.
+3. **Ambient lightning** — Random bolt every 0.2–1.8s, depth 3, ~30% opacity. Same generation algorithm.
 
 Strike state type: `Strike { id, points: [number,number][], branches: [number,number][][], x, y }`.
+
+### Hero Title Surges (`components/hero.tsx`)
+
+Electricty effect overlaid on the "RIAN CORCINO" heading. After the entrance animation settles (900ms delay), letter bounding rects are measured and 8 bolts are generated via midpoint-displacement (`jaggedLine`, roughness 0.34, depth 4). Each bolt cycles every 3.2–5.2s with a 0.2s stagger between bolts.
+
+Two bolt types (chosen per-bolt, ~45% outward):
+- **Contained** — centered within letter bounds, free angle (sampled from 8×45° bands), length 35–80% of letter size.
+- **Outward** — one end anchored on the letter, the other end shooting 60–120% of letter size outside the title.
+
+Each bolt stores 3 independently-displaced path variants that step-cycle at 90ms for a flickering electric effect, plus 0–2 branches that flicker independently. Rendered as a single `<svg>` overlay with a two-pass `feGaussianBlur` glow filter (stdDeviation 3 + 6).
 
 ### Styling
 
