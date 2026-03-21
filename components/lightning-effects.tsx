@@ -145,8 +145,7 @@ export default function LightningEffects() {
         const cx = Math.random() * window.innerWidth
         const cy = window.innerHeight * (0.3 + Math.random() * 0.5)
         const id = nextId++
-        const rawPoints = generateBolt(cx, 0, cx + (Math.random() - 0.5) * 200, cy, 0.45, 3)
-        const strike = { id, points: rawPoints, branches: [], x: cx, y: cy, opacity: 0.25, drawing: true }
+        const strike = { id, ...buildStrike(cx, cy), opacity: 0.3, drawing: true }
         setStrikes(prev => [...prev, strike])
         setTimeout(() => {
           setStrikes(prev => prev.map(s => s.id === id ? { ...s, drawing: false } : s))
