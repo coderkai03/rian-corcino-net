@@ -128,7 +128,7 @@ export default function Hero() {
         branches: b.branches,
         id: i,
         delay: `${(i * 0.2).toFixed(1)}s`,
-        duration: `${(1.8 + Math.random() * 1.4).toFixed(2)}s`,
+        duration: `${(3.2 + Math.random() * 2.0).toFixed(2)}s`,
       })))
     }, 900)
     return () => clearTimeout(timer)
