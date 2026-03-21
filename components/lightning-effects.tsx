@@ -64,6 +64,7 @@ export default function LightningEffects() {
   const rafRef = useRef<number>(0)
   const mouseRef = useRef({ x: -100, y: -100 })
   const isHoveringButton = useRef(false)
+  const lastClickTime = useRef(0)
   const [strikes, setStrikes] = useState<(Strike & { opacity: number; drawing: boolean })[]>([])
   const [isTouch, setIsTouch] = useState(false)
   const [hasClicked, setHasClicked] = useState(false)
@@ -86,9 +87,12 @@ export default function LightningEffects() {
     const loop = () => {
       if (cursorRef.current) {
         const { x, y } = mouseRef.current
-        const jx = isHoveringButton.current ? (Math.random() - 0.5) * 4 : 0
-        const jy = isHoveringButton.current ? (Math.random() - 0.5) * 4 : 0
-        const rot = isHoveringButton.current ? 15 + (Math.random() - 0.5) * 6 : 15
+        const clickAge = Date.now() - lastClickTime.current
+        const clickVibrate = clickAge < 350
+        const vibrateMag = clickVibrate ? (1 - clickAge / 350) * 10 : 0
+        const jx = (isHoveringButton.current ? (Math.random() - 0.5) * 4 : 0) + (Math.random() - 0.5) * vibrateMag
+        const jy = (isHoveringButton.current ? (Math.random() - 0.5) * 4 : 0) + (Math.random() - 0.5) * vibrateMag
+        const rot = (isHoveringButton.current ? 15 + (Math.random() - 0.5) * 6 : 15) + (Math.random() - 0.5) * vibrateMag * 1.5
         cursorRef.current.style.transform = `translate(${x + jx}px, ${y + jy}px) rotate(${rot}deg) translate(-9px, -16px)`
       }
       rafRef.current = requestAnimationFrame(loop)
@@ -130,6 +134,7 @@ export default function LightningEffects() {
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       spawnStrike(e.clientX, e.clientY)
+      lastClickTime.current = Date.now()
       setHasClicked(true)
     }
     document.addEventListener("click", onClick)
