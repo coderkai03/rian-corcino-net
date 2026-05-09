@@ -131,7 +131,7 @@ export default function About() {
                 </p>
                 <ul className="list-disc list-inside ml-4 mt-2 space-y-1">
                   <li><strong className="text-white">2x</strong> SWE Intern @ Microsoft</li>
-                  <li>Won <strong className="text-white">7x</strong> hackathons across the US</li>
+                  <li>Won <strong className="text-white">10x</strong> hackathons across the US</li>
                   <li><strong className="text-white">20K+</strong> followers on social media</li>
                 </ul>
               </div>
